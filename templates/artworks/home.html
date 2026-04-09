@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="h-[90vh] flex flex-col justify-center items-center text-center px-6 reveal">
+    <div class="max-w-4xl space-y-8">
+        <h1 class="text-6xl md:text-8xl font-serif leading-tight">Patterns that tell <span class="italic text-[#6B6B6B]">stories.</span></h1>
+        <p class="text-lg md:text-xl text-gray-500 font-light max-w-2xl mx-auto tracking-wide">
+            Explore the intricate world of Mandalas and Zen doodles, where every stroke is a meditation and every pattern is a prayer.
+        </p>
+        <div class="pt-6">
+            <a href="{% url 'gallery' %}" class="btn-premium px-10 py-5 text-sm uppercase tracking-widest inline-block">Explore Gallery</a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Artworks -->
+<section class="py-32 px-6 lg:px-16 reveal">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div class="space-y-4">
+                <span class="text-xs uppercase tracking-[0.4em] text-[#C2A878] font-semibold">Curated Selection</span>
+                <h2 class="text-4xl md:text-5xl font-serif">Featured Collections</h2>
+            </div>
+            <a href="{% url 'gallery' %}" class="text-xs uppercase tracking-widest border-b border-[#C2A878] pb-1 hover:text-[#C2A878] transition duration-300 mb-4 md:mb-0">View All Collections</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {% for artwork in featured_artworks %}
+            <div class="group cursor-pointer reveal">
+                <a href="{% url 'artwork_detail' artwork.pk %}">
+                    <div class="aspect-[4/5] bg-white overflow-hidden mb-6 premium-shadow card-hover rounded-xl">
+                        <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}" class="w-full h-full object-cover transition duration-1000 group-hover:scale-110">
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-[#C2A878] font-medium">{{ artwork.category }}</span>
+                        <h3 class="text-lg font-serif">{{ artwork.title }}</h3>
+                        <p class="text-sm font-light text-[#6B6B6B]">₹{{ artwork.price }}</p>
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <div class="col-span-full py-20 text-center border border-dashed border-[#E5E5E5] rounded-xl">
+                <p class="text-gray-400 italic font-serif">No artworks featured yet. Please check back later.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-40 bg-white px-6 reveal">
+    <div class="max-w-5xl mx-auto text-center space-y-10">
+        <h2 class="text-4xl md:text-6xl font-serif">Want something truly <span class="italic text-[#C2A878]">unique?</span></h2>
+        <p class="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed">Tanvi accepts custom commissions for personal spaces, corporate gifts, and bespoke murals.</p>
+        <div class="pt-6">
+            <a href="{% url 'custom_order' %}" class="btn-premium px-12 py-6 text-sm uppercase tracking-widest inline-block">Commission Artwork</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

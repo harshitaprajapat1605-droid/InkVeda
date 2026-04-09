@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="py-32 px-6 lg:px-16 reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div class="aspect-[3/4] bg-white overflow-hidden premium-shadow rounded-2xl reveal">
+            <!-- Artist Photo -->
+            <img src="{% static 'images/tanvi.jpg' %}" 
+                alt="Tanvi Prajapat"
+                class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000">
+        </div>
+
+        <div class="space-y-10 reveal">
+            <span class="text-xs uppercase tracking-[0.4em] text-[#C2A878] font-bold italic">The Soul Behind InkVeda</span>
+            <h1 class="text-6xl md:text-7xl font-serif leading-tight">Tanvi Prajapat</h1>
+            <div class="prose prose-lg text-[#6B6B6B] font-light leading-relaxed italic text-xl border-l-2 border-[#C2A878] pl-8 py-2">
+                <p>"Art is not just what I do; it's how I breathe. Every mandala is a fragment of my soul, a pattern that whispered to me in silence."</p>
+            </div>
+            <div class="space-y-8 text-[#6B6B6B] leading-relaxed text-lg font-light">
+                <p>Based in India, Tanvi is a self-taught artist specializing in the intricate worlds of Mandalas, Zentangle, and meditative doodles. Her journey with InkVeda began as a personal practice of mindfulness, which eventually transformed into a professional pursuit of capturing complex symmetries and patterns.</p>
+                <p>Her work is characterized by precision, patience, and a deep respect for the meditative process of creation. Each piece is handcrafted, often taking weeks of meticulous line work to complete.</p>
+            </div>
+
+            <div class="pt-10 flex flex-wrap gap-12">
+                <div class="space-y-1">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]">Style</h4>
+                    <p class="text-sm text-[#C2A878] font-medium italic">Minimal & Intricate</p>
+                </div>
+                <div class="space-y-1">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]">Medium</h4>
+                    <p class="text-sm text-[#C2A878] font-medium italic">Ink on Acid-free Paper</p>
+                </div>
+                <div class="space-y-1">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]">Location</h4>
+                    <p class="text-sm text-[#C2A878] font-medium italic">Indore, India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .header { text-align: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px; }
+        .logo { font-size: 28px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; color: #000; }
+        .content { padding: 30px 0; }
+        .order-card { background: #fafafa; border: 1px solid #eeeeee; border-radius: 6px; padding: 20px; margin: 20px 0; }
+        .label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #999; margin-bottom: 4px; }
+        .value { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: #333; }
+        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; background-color: #fef3c7; color: #d97706; }
+        .footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">InkVeda</div>
+            <p style="font-size: 14px; color: #666; margin-top: 10px;">Order Received</p>
+        </div>
+        <div class="content">
+            <h2 style="font-weight: 300; margin-bottom: 20px;">Hi {{ order.customer_name }},</h2>
+            <p>Thank you for your order! We have received your request and it is currently <strong>under verification</strong>.</p>
+            
+            <div class="order-card">
+                <div class="label">Order ID</div>
+                <div class="value">#{{ order.order_id }}</div>
+                
+                <div class="label">Artwork</div>
+                <div class="value">{{ order.artwork.title }}</div>
+                
+                <div class="label">Price</div>
+                <div class="value">₹{{ order.total_price }}</div>
+                
+                <div class="label">Payment Method</div>
+                <div class="value">{{ order.payment_method }}</div>
+                
+                <div class="label">Payment Status</div>
+                <div><span class="status-badge">{{ order.get_payment_status_display }}</span></div>
+            </div>
+
+            <p style="font-size: 14px; color: #666;">We will notify you once your payment is confirmed and your artwork is ready for shipment.</p>
+        </div>
+        <div class="footer">
+            <p>© 2026 InkVeda | Art That Inspires</p>
+        </div>
+    </div>
+</body>
+</html>

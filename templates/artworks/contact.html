@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-32 px-6 lg:px-16 reveal">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <div class="text-center max-w-2xl mb-24 space-y-6">
+            <h1 class="text-5xl md:text-6xl font-serif">Get in touch.</h1>
+            <p class="text-[#6B6B6B] font-light leading-relaxed text-lg">Questions about an order, commission inquiries,
+                or just want to say hello? Use the form below or reach out directly.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mb-24">
+            <div
+                class="p-12 bg-white premium-shadow text-center space-y-4 rounded-xl border border-[#E5E5E5] reveal hover:border-[#C2A878] transition-colors duration-500">
+                <p class="text-[10px] uppercase tracking-[0.4em] text-[#C2A878] font-bold">Email</p>
+                <p class="text-sm font-medium">prajapattanvi5@gmail.com</p>
+            </div>
+            <div
+                class="p-12 bg-white premium-shadow text-center space-y-4 rounded-xl border border-[#E5E5E5] reveal hover:border-[#C2A878] transition-colors duration-500">
+                <p class="text-[10px] uppercase tracking-[0.4em] text-[#C2A878] font-bold">Phone</p>
+                <p class="text-sm font-medium">+91 70890 89435</p>
+            </div>
+            <div
+                class="p-12 bg-white premium-shadow text-center space-y-4 rounded-xl border border-[#E5E5E5] reveal hover:border-[#C2A878] transition-colors duration-500">
+                <p class="text-[10px] uppercase tracking-[0.4em] text-[#C2A878] font-bold">Social</p>
+                <p class="text-sm font-medium"><a href="https://www.instagram.com/artb_yharshita/">@artb_yharshita</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full max-w-2xl bg-white p-10 md:p-16 premium-shadow rounded-2xl border border-[#E5E5E5] reveal">
+            <h3 class="text-[10px] uppercase tracking-[0.4em] font-bold mb-10 text-center text-[#C2A878]">Send a Message
+            </h3>
+            <form class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <input type="text" placeholder="Full Name"
+                        class="w-full p-5 bg-[#F5F3EF] border border-transparent focus:border-[#C2A878] focus:bg-white rounded-lg transition-all outline-none text-sm placeholder:text-[#6B6B6B]/50">
+                    <input type="email" placeholder="Email Address"
+                        class="w-full p-5 bg-[#F5F3EF] border border-transparent focus:border-[#C2A878] focus:bg-white rounded-lg transition-all outline-none text-sm placeholder:text-[#6B6B6B]/50">
+                </div>
+                <input type="text" placeholder="Subject"
+                    class="w-full p-5 bg-[#F5F3EF] border border-transparent focus:border-[#C2A878] focus:bg-white rounded-lg transition-all outline-none text-sm placeholder:text-[#6B6B6B]/50">
+                <textarea rows="6" placeholder="Your Message"
+                    class="w-full p-5 bg-[#F5F3EF] border border-transparent focus:border-[#C2A878] focus:bg-white rounded-lg transition-all outline-none text-sm placeholder:text-[#6B6B6B]/50"></textarea>
+                <button type="button"
+                    class="btn-premium w-full py-6 text-xs uppercase tracking-[0.3em] font-bold shadow-lg shadow-[#1A1A1A]/10">Send
+                    Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

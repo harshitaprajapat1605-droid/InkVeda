@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-20 px-6 lg:px-16">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl font-serif mb-12 text-center">Checkout</h1>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Order Summary -->
+            <div class="bg-white p-8 lg:p-12 premium-shadow h-fit">
+                <h2 class="text-xs uppercase tracking-widest font-bold mb-8 border-b pb-4">Order Summary</h2>
+                <div class="flex space-x-6 mb-8">
+                    <div class="w-20 h-24 bg-gray-100 flex-shrink-0">
+                        <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg leading-tight">{{ artwork.title }}</h3>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">{{ artwork.category }}</p>
+                        <p class="text-sm mt-2">₹{{ artwork.price }}</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 pt-4 border-t border-gray-50">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-400">Subtotal</span>
+                        <span>₹{{ artwork.price }}</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-400">Shipping</span>
+                        <span class="text-green-600 uppercase text-[10px] tracking-widest font-bold">Free</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-bold pt-4 border-t">
+                        <span>Total</span>
+                        <span>₹{{ artwork.price }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping Form -->
+            <div>
+                <form method="POST" class="space-y-6">
+                    {% csrf_token %}
+                    <h2 class="text-xs uppercase tracking-widest font-bold mb-4">Shipping Details</h2>
+                    
+                    <div>
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Full Name</label>
+                        {{ form.customer_name }}
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Email</label>
+                            {{ form.email }}
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Phone</label>
+                            {{ form.phone }}
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Shipping Address</label>
+                        {{ form.address }}
+                    </div>
+
+                    <div class="w-32">
+                        <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Quantity</label>
+                        {{ form.quantity }}
+                    </div>
+
+                    <button type="submit" class="btn-premium w-full py-5 text-sm uppercase tracking-widest mt-8">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

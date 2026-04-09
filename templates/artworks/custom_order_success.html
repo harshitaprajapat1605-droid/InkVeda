@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-20 px-6 lg:px-16 flex flex-col items-center justify-center min-h-[50vh]">
+    <div class="max-w-xl text-center space-y-8">
+        <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </div>
+        <h1 class="text-4xl font-serif">Inquiry Received</h1>
+        <p class="text-gray-500 leading-relaxed font-light">Your custom order request has been received. We will review and update you soon.</p>
+        <div class="pt-8">
+            <a href="{% url 'gallery' %}" class="btn-premium px-10 py-4 text-xs uppercase tracking-widest inline-block">Back to Gallery</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

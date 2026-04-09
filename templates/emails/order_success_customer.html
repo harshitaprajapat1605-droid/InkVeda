@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Helvetica', sans-serif; color: #1a1a1a; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 40px; border: 1px solid #f0f0f0; }
+        .header { text-align: center; border-bottom: 2px solid #f5f3ef; padding-bottom: 20px; }
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; }
+        .order-id { color: #888; font-size: 11px; margin-top: 10px; }
+        .content { padding: 30px 0; }
+        .artwork-box { display: flex; align-items: center; background: #fdfdfd; padding: 20px; border: 1px solid #f5f5f5; margin: 20px 0; }
+        .total { font-size: 20px; font-weight: bold; text-align: right; margin-top: 20px; }
+        .footer { text-align: center; font-size: 10px; color: #aaa; margin-top: 40px; letter-spacing: 2px; }
+        .btn { display: inline-block; padding: 12px 24px; background: #1a1a1a; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold; text-transform: uppercase; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">InkVeda</div>
+            <div class="order-id">ORDER #{{ order.order_id }}</div>
+        </div>
+        <div class="content">
+            <h2 style="font-weight: 300; font-style: italic;">Thank you for your order!</h2>
+            <p>Hi {{ order.customer_name }}, we have received your order for the following artwork. It is currently <strong>under verification</strong>.</p>
+            
+            <div class="artwork-box">
+                <div style="flex-grow: 1;">
+                    <div style="font-size: 14px; font-weight: bold;">{{ order.artwork.title }}</div>
+                    <div style="font-size: 12px; color: #888;">Category: {{ order.artwork.category }}</div>
+                    <div style="font-size: 12px;">Quantity: {{ order.quantity }}</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 10px; color: #aaa; text-transform: uppercase; font-weight: bold;">Price</div>
+                    <div style="font-size: 18px; font-weight: bold;">₹{{ order.total_price }}</div>
+                </div>
+            </div>
+
+            <div style="border-top: 1px solid #f5f3ef; padding-top: 20px;">
+                <p><strong>Payment Status:</strong> {{ order.get_payment_status_display }}</p>
+                <p><strong>Shipping to:</strong><br>
+                <span style="font-size: 14px; color: #666;">{{ order.address|linebreaksbr }}</span></p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 14px; color: #666;">You can track your order progress on our website using your tracking ID.</p>
+                <a href="{{ site_url }}/track/" class="btn">Track My Order</a>
+            </div>
+        </div>
+        <div class="header" style="border-top: 2px solid #f5f3ef; border-bottom: none; padding-top: 30px;">
+            <p style="font-size: 12px; color: #999;">We will notify you once your payment is confirmed and your artwork is dispatched.</p>
+        </div>
+        <div class="footer">
+            PATTERNS THAT TELL STORIES<br>
+            © 2026 INKVEDA BY TANVI PRAJAPAT
+        </div>
+    </div>
+</body>
+</html>

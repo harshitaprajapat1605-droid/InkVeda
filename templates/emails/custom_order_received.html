@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .header { text-align: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px; }
+        .logo { font-size: 28px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; color: #000; }
+        .content { padding: 30px 0; }
+        .details { background: #fafafa; border: 1px solid #eeeeee; border-radius: 6px; padding: 20px; margin: 20px 0; }
+        .label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #999; margin-bottom: 2px; }
+        .value { font-size: 15px; margin-bottom: 15px; color: #333; }
+        .footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">InkVeda</div>
+            <p style="font-size: 14px; color: #666; margin-top: 10px;">Custom Order Received</p>
+        </div>
+        <div class="content">
+            <h2 style="font-weight: 300;">Hi {{ order.name }},</h2>
+            <p>Thank you for reaching out to InkVeda for a custom artwork! We have received your request and it is currently <strong>Pending Review</strong>.</p>
+            
+            <div class="details">
+                <div class="label">Art Type</div>
+                <div class="value">{{ order.art_type }}</div>
+                
+                <div class="label">Preferred Size</div>
+                <div class="value">{{ order.get_size_display }}</div>
+                
+                <div class="label">Detail Level</div>
+                <div class="value">{{ order.get_detail_level_display }}</div>
+                
+                <div class="label">Color Preference</div>
+                <div class="value">{{ order.color_preference }}</div>
+                
+                <div class="label">Deadline</div>
+                <div class="value">{{ order.deadline }}</div>
+                
+                <div class="label">Status</div>
+                <div class="value" style="color: #d97706; font-weight: bold;">{{ order.get_status_display }}</div>
+            </div>
+
+            {% if order.status == 'Accepted' and order.final_price %}
+            <div style="margin-top: 20px; padding: 15px; background-color: #f0fdf4; border: 1px solid #bbf7d0; text-align: center; border-radius: 6px;">
+                <p style="font-size: 13px; color: #166534; margin-bottom: 10px;">Great news! Your order is already accepted. You can complete the payment below:</p>
+                <a href="{{ site_url }}{% url 'custom_order_payment' order.id %}" style="display: inline-block; padding: 10px 20px; background-color: #166534; color: #fff; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold;">Pay Securely via UPI</a>
+            </div>
+{% endif %}
+
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="{{ site_url }}{% url 'track_order' %}" style="color: #666; font-size: 12px; text-decoration: underline;">Track your order status on our website</a>
+            </p>
+
+            <p>I will review your requirements and get back to you with an update soon.</p>
+        </div>
+        <div class="footer">
+            <p>© 2026 InkVeda | Art That Inspires</p>
+        </div>
+    </div>
+</body>
+</html>

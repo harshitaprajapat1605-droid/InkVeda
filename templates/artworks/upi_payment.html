@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-20 px-6 lg:px-16 flex flex-col items-center justify-center">
+    <div class="max-w-2xl w-full bg-white p-8 lg:p-12 premium-shadow">
+        <h1 class="text-3xl font-serif mb-2 text-center">Complete Your Payment</h1>
+        <p class="text-gray-500 mb-8 text-center text-sm italic">Please scan the QR code below and complete the payment.</p>
+        
+        <div class="flex flex-col items-center mb-10 p-6 bg-gray-50 rounded-xl border border-gray-100">
+            <!-- QR Code generated from UPI Link -->
+            <div class="bg-white p-4 rounded-lg shadow-sm mb-6 border-2 border-dashed border-gray-200">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={{ upi_link|urlencode }}" alt="UPI QR Code" class="w-48 h-48">
+            </div>
+            
+            <div class="text-center">
+                <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Payable Amount</p>
+                <p class="text-4xl font-bold text-black">₹{{ order.total_price }}</p>
+                <p class="text-sm font-medium mt-2 text-gray-700">UPI ID: <span class="text-blue-600">7089089435@ybl</span></p>
+            </div>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-blue-700 font-bold uppercase tracking-tight">Important Instructions</p>
+                    <ul class="text-xs text-blue-600 mt-1 list-disc list-inside space-y-1">
+                        <li><strong>Please pay exact amount and keep transaction ID safe</strong></li>
+                        <li>Scan QR using any UPI app (GPay, PhonePe, Paytm, etc.)</li>
+                        <li>Complete the payment and take a screenshot.</li>
+                        <li>Enter the 12-digit Transaction ID (UTR) below to verify.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <form method="POST" enctype="multipart/form-data" class="space-y-6">
+            {% csrf_token %}
+            
+            <div>
+                <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Transaction ID (Required)</label>
+                {{ form.transaction_id }}
+                {% if form.transaction_id.errors %}
+                    <p class="text-red-500 text-[10px] mt-1">{{ form.transaction_id.errors.0 }}</p>
+                {% endif %}
+            </div>
+            
+            <div>
+                <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-1 block">Payment Screenshot (Optional)</label>
+                <div class="mt-1">
+                    {{ form.payment_screenshot }}
+                </div>
+                <p class="text-[10px] text-gray-400 mt-2 italic">* Uploading a screenshot helps us verify faster.</p>
+            </div>
+
+            <button type="submit" class="btn-premium w-full py-4 text-sm uppercase tracking-widest mt-4">I Have Paid</button>
+        </form>
+        
+        <p class="mt-8 text-center text-[10px] text-gray-400 uppercase tracking-widest">Secured Payment Verification</p>
+    </div>
+</section>
+{% endblock %}

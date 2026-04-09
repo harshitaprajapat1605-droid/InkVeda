@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Payment | InkVeda{% endblock %}
+
+{% block content %}
+<section class="py-20 px-6 lg:px-16 flex flex-col items-center justify-center min-h-[60vh]">
+    <div class="max-w-md w-full bg-white p-12 text-center premium-shadow space-y-8">
+        <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+            </svg>
+        </div>
+        
+        <h1 class="text-3xl font-serif">Secure Payment</h1>
+        <p class="text-sm text-gray-500">Redirecting to Razorpay secure checkout for Order <span class="font-bold text-black">{{ order.order_id }}</span></p>
+        
+        <div class="py-6 border-y border-gray-50">
+            <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Amount to Pay</p>
+            <p class="text-4xl font-bold">₹{{ order.total_price }}</p>
+        </div>
+
+        <button id="rzp-button" class="btn-premium w-full py-5 text-sm uppercase tracking-widest">Pay Now</button>
+        
+        <p class="text-[10px] uppercase tracking-widest text-gray-400">Secured by Razorpay</p>
+    </div>
+
+    <!-- Hidden Form for Payment Verification -->
+    <form action="{% url 'payment_verify' %}" method="POST" id="payment-verify-form" class="hidden">
+        {% csrf_token %}
+        <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+        <input type="hidden" name="razorpay_order_id" id="razorpay_order_id" value="{{ razorpay_order_id }}">
+        <input type="hidden" name="razorpay_signature" id="razorpay_signature">
+    </form>
+</section>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "{{ razorpay_key_id }}",
+        "amount": "{{ amount }}",
+        "currency": "INR",
+        "name": "InkVeda",
+        "description": "Artwork Purchase - {{ order.order_id }}",
+        "image": "https://prajapattanvi5.github.io/inkveda-logo.png", // Replace with your logo if available
+        "order_id": "{{ razorpay_order_id }}",
+        "handler": function (response){
+            document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+            document.getElementById('razorpay_order_id').value = response.razorpay_order_id;
+            document.getElementById('razorpay_signature').value = response.razorpay_signature;
+            document.getElementById('payment-verify-form').submit();
+        },
+        "prefill": {
+            "name": "{{ customer_name }}",
+            "email": "{{ email }}",
+            "contact": "{{ phone }}"
+        },
+        "theme": {
+            "color": "#1a1a1a"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    
+    // Auto-open on load
+    window.onload = function() {
+        // rzp1.open(); // Optional, user might want to click pay now
+    };
+</script>
+{% endblock %}

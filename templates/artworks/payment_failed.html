@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-20 px-6 lg:px-16 flex flex-col items-center justify-center min-h-[60vh]">
+    <div class="max-w-md w-full bg-white p-12 text-center premium-shadow space-y-8">
+        <div class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+        
+        <h1 class="text-3xl font-serif">Payment Failed</h1>
+        <p class="text-sm text-gray-500 italic">"Every stroke is a new beginning."</p>
+        <p class="text-gray-500">We couldn't process your payment. This could be due to a technical error or a cancellation.</p>
+        
+        <div class="flex flex-col space-y-4 pt-6">
+            <button onclick="window.history.back()" class="btn-premium py-5 text-sm uppercase tracking-widest">Retry Payment</button>
+            <a href="{% url 'contact' %}" class="text-xs uppercase tracking-widest text-gray-400 hover:text-black transition">Contact Support</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

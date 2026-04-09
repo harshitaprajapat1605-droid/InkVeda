@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; line-height: 1.6; margin: 0; padding: 0; background-color: #fff; }
+        .container { max-width: 600px; margin: 20px auto; padding: 30px; border: 1px solid #eee; border-top: 5px solid #000; }
+        .label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #888; margin-bottom: 2px; }
+        .value { font-size: 15px; margin-bottom: 20px; color: #000; }
+        .highlight { background: #f9f9f9; padding: 15px; border-radius: 4px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #eee; padding-bottom: 15px;">New Order Alert!</h2>
+        <p>Hi Tanvi, a new order has been placed on InkVeda.</p>
+        
+        <div class="highlight">
+            <div class="label">Order ID</div>
+            <div class="value" style="font-weight: bold; font-size: 18px;">{{ order.order_id }}</div>
+            
+            <div class="label">Artwork Details</div>
+            <div class="value">{{ order.artwork.title }} (Qty: {{ order.quantity }})</div>
+            
+            <div class="label">Total Amount</div>
+            <div class="value" style="color: #059669; font-weight: bold;">₹{{ order.total_price }}</div>
+        </div>
+
+        <h3 style="font-size: 14px; text-transform: uppercase; color: #666; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">Customer Details</h3>
+        
+        <div class="label">Name</div>
+        <div class="value">{{ order.customer_name }}</div>
+        
+        <div class="label">Phone</div>
+        <div class="value">{{ order.phone }}</div>
+        
+        <div class="label">Email</div>
+        <div class="value">{{ order.email }}</div>
+        
+        <div class="label">Transaction ID (UPI)</div>
+        <div class="value" style="color: #2563eb; font-weight: bold;">{{ order.transaction_id|default:"Not Provided" }}</div>
+
+        <p style="font-size: 12px; color: #999; margin-top: 30px; text-align: center;"> Please log in to admin to verify the payment. </p>
+    </div>
+</body>
+</html>

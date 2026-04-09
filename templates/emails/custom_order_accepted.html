@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; line-height: 1.6; margin: 0; padding: 0; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .header { text-align: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px; }
+        .logo { font-size: 28px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; color: #000; }
+        .content { padding: 30px 0; }
+        .footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 40px; }
+        .cta-button { display: inline-block; padding: 12px 24px; background-color: #000; color: #fff; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">InkVeda</div>
+            <p style="font-size: 14px; color: #666; margin-top: 10px;">Great News!</p>
+        </div>
+        <div class="content">
+            <h2 style="font-weight: 300;">Hi {{ order.name }},</h2>
+            <p>I have reviewed your custom artwork request for <strong>"{{ order.art_type }}"</strong> and I'm excited to tell you that it has been <strong>Accepted</strong>!</p>
+            
+            <p>I would love to discuss the finer details with you and finalize the timeline. I will be reaching out to you via phone or email shortly to move this forward.</p>
+
+            {% if order.final_price %}
+            <div style="margin-top: 30px; padding: 20px; background-color: #fcfcfc; border: 1px solid #eee; text-align: center;">
+                <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 5px;">Total Agreed Amount</p>
+                <h3 style="font-size: 32px; margin: 0 0 20px 0; color: #000;">₹{{ order.final_price }}</h3>
+                <a href="{{ site_url }}{% url 'custom_order_payment' order.id %}" class="cta-button" style="color: #ffffff;">Pay Securely via UPI</a>
+            </div>
+            {% endif %}
+
+            <p style="margin-top: 20px;">If you have any urgent questions, feel free to reply to this email.</p>
+        </div>
+        <div class="footer">
+            <p style="margin-bottom: 20px;">
+                <a href="http://localhost:8000{% url 'track_order' %}" style="color: #999; text-decoration: underline;">View details on our website</a>
+            </p>
+            <p>© 2026 InkVeda | Art That Inspires</p>
+        </div>
+    </div>
+</body>
+</html>
