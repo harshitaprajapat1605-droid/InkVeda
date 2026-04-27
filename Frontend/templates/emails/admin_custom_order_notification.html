@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1a1a1a; line-height: 1.6; margin: 0; padding: 0; background-color: #fff; }
+        .container { max-width: 600px; margin: 20px auto; padding: 30px; border: 1px solid #eee; border-top: 5px solid #000; }
+        .label { font-size: 10px; font-weight: bold; text-transform: uppercase; color: #888; margin-bottom: 2px; }
+        .value { font-size: 15px; margin-bottom: 20px; color: #000; }
+        .highlight { background: #f9f9f9; padding: 15px; border-radius: 4px; margin: 20px 0; }
+        .note { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; font-size: 13px; color: #92400e; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #eee; padding-bottom: 15px;">New Custom Order Request</h2>
+        <p>Hi Tanvi, a new custom order request has been submitted on InkVeda.</p>
+        
+        <div class="highlight">
+            <div class="label">Customer Name</div>
+            <div class="value" style="font-weight: bold;">{{ order.name }}</div>
+            
+            <div class="label">Email Address</div>
+            <div class="value">{{ order.email }}</div>
+            
+            <div class="label">Phone Number</div>
+            <div class="value">{{ order.phone }}</div>
+        </div>
+
+        <h3 style="font-size: 14px; text-transform: uppercase; color: #666; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;">Request Details</h3>
+        
+        <div class="label">Art Type</div>
+        <div class="value">{{ order.art_type }}</div>
+        
+        <div class="label">Preferred Size</div>
+        <div class="value">{{ order.size }}</div>
+        
+        <div class="label">Color Preference</div>
+        <div class="value">{{ order.color_preference }}</div>
+        
+        <div class="label">Vision / Description</div>
+        <div class="value">{{ order.description }}</div>
+        
+        <div class="label">Requested Deadline</div>
+        <div class="value">{{ order.deadline }}</div>
+
+        {% if order.reference_image %}
+        <div style="margin-top: 30px; padding: 20px; border: 1px solid #f0f0f0; border-radius: 8px; text-align: center;">
+            <div class="label" style="margin-bottom: 15px;">Reference Image Provided</div>
+            <img src="{{ order.reference_image.url }}" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div style="margin-top: 10px;">
+                <a href="{{ order.reference_image.url }}" style="font-size: 11px; color: #C2A878; text-decoration: none; font-weight: bold; text-transform: uppercase;">View Full Size</a>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="note">
+            <strong>Next Steps:</strong> You can contact the customer via phone/email to finalize pricing.
+        </div>
+
+        <p style="font-size: 12px; color: #999; margin-top: 30px; text-align: center;"> Please log in to admin to manage this request. </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-32 px-6 lg:px-16 flex justify-center">
+    <div class="max-w-md w-full bg-white p-10 premium-shadow rounded-2xl border border-[#E5E5E5] reveal">
+        <h2 class="text-3xl font-serif mb-8 text-center">
+            {% if is_admin_portal %}
+                Admin <span class="italic text-[#C2A878]">Portal</span>
+            {% else %}
+                Login to <span class="italic text-[#C2A878]">InkVeda</span>
+            {% endif %}
+        </h2>
+        <form method="POST" class="space-y-6">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-[#6B6B6B] font-semibold">{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                    <p class="text-red-500 text-[10px] uppercase tracking-widest mt-1">{{ field.errors.0 }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn-premium w-full py-4 text-xs uppercase tracking-[0.3em] font-bold mt-4 shadow-lg">Enter Studio</button>
+        </form>
+    </div>
+</section>
+
+<style>
+    input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #F5F3EF;
+        border-radius: 0;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    input:focus {
+        border-color: #1A1A1A;
+    }
+</style>
+{% endblock %}

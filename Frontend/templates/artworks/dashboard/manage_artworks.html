@@ -1,0 +1,56 @@
+{% extends 'accounts/admin_dashboard.html' %}
+
+{% block dashboard_content %}
+<div class="space-y-12">
+    <header class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="space-y-2 text-center md:text-left">
+            <h1 class="text-4xl font-serif">Studio <span class="italic text-[#C2A878]">Inventory</span></h1>
+            <p class="text-sm text-[#6B6B6B] font-light">Curate and manage your collection of handcrafted masterpieces.</p>
+        </div>
+        <a href="{% url 'add_artwork' %}" class="px-8 py-3 bg-[#1A1A1A] text-white text-[10px] uppercase tracking-widest hover:bg-[#C2A878] transition duration-500 rounded-full">
+            + New Masterpiece
+        </a>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {% for artwork in artworks %}
+        <div class="group bg-white premium-shadow border border-[#E5E5E5] overflow-hidden rounded-2xl flex flex-col h-full reveal">
+            <!-- Image Container -->
+            <div class="relative h-64 overflow-hidden bg-[#FDFDFD] flex items-center justify-center p-4">
+                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-700">
+                <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-[#E5E5E5]">
+                    <span class="text-[9px] uppercase tracking-widest font-bold text-[#1A1A1A]">₹{{ artwork.price }}</span>
+                </div>
+                {% if not artwork.is_available %}
+                <div class="absolute inset-0 bg-white/60 backdrop-blur-[2px] flex items-center justify-center">
+                    <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#6B6B6B] border border-[#6B6B6B] px-6 py-2">Sold Out</span>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Details -->
+            <div class="p-8 flex-grow space-y-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h4 class="font-serif text-xl text-[#1A1A1A]">{{ artwork.title }}</h4>
+                        <p class="text-[10px] uppercase tracking-widest text-[#C2A878] font-bold">{{ artwork.category }}</p>
+                    </div>
+                </div>
+                <p class="text-xs text-[#6B6B6B] line-clamp-2 leading-relaxed">{{ artwork.description }}</p>
+            </div>
+
+            <!-- Actions -->
+            <div class="px-8 pb-8 flex gap-4 mt-auto">
+                <a href="{% url 'edit_artwork' artwork.pk %}" class="flex-grow text-center py-2.5 border border-[#1A1A1A] text-[9px] uppercase tracking-widest font-bold hover:bg-[#1A1A1A] hover:text-white transition duration-300">Edit</a>
+                <a href="{% url 'delete_artwork' artwork.pk %}" class="flex-grow text-center py-2.5 border border-red-100 text-[9px] uppercase tracking-widest font-bold text-red-400 hover:bg-red-50 transition duration-300">Delete</a>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-span-full py-32 text-center bg-white rounded-3xl border border-dashed border-[#E5E5E5]">
+            <p class="font-serif text-2xl text-[#6B6B6B] italic">Your gallery is waiting for its first masterpiece.</p>
+            <a href="{% url 'add_artwork' %}" class="inline-block mt-8 text-xs uppercase tracking-widest border-b border-[#1A1A1A] pb-1">Start Curating</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

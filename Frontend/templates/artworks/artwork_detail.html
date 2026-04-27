@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-32 px-6 lg:px-16 reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+        <!-- Image Gallery -->
+        <div class="space-y-8 reveal">
+            <div class="bg-white overflow-hidden premium-shadow rounded-2xl flex items-center justify-center">
+                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}" class="w-full h-auto max-h-[70vh] object-contain transition duration-700 hover:scale-105">
+            </div>
+        </div>
+
+        <!-- Details -->
+        <div class="flex flex-col justify-center reveal">
+            <span class="text-[10px] uppercase tracking-[0.4em] text-[#C2A878] font-bold mb-6 italic">Handcrafted Story</span>
+            <h1 class="text-5xl md:text-6xl font-serif mb-8 leading-tight">{{ artwork.title }}</h1>
+            <p class="text-2xl font-light mb-10 text-[#1A1A1A]">₹{{ artwork.price }}</p>
+            
+            <div class="prose prose-sm text-[#6B6B6B] max-w-none mb-14 leading-relaxed text-lg font-light">
+                {{ artwork.description|linebreaks }}
+            </div>
+
+            {% if artwork.is_available %}
+            <div class="space-y-6">
+                <a href="{% url 'checkout' artwork.pk %}" class="btn-premium w-full block text-center py-6 text-xs uppercase tracking-[0.3em] font-bold shadow-lg shadow-[#1A1A1A]/10">Purchase Artwork</a>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] text-center font-medium">Free insured shipping across India</p>
+            </div>
+            {% else %}
+            <div class="space-y-4">
+                <button disabled class="w-full py-6 bg-[#F5F3EF] border border-[#E5E5E5] text-[#6B6B6B] text-xs uppercase tracking-[0.3em] font-bold cursor-not-allowed rounded-lg">Collected / Sold Out</button>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-[#C2A878] text-center font-bold italic">Interested in something similar? Commission a custom piece.</p>
+            </div>
+            {% endif %}
+
+            <!-- Additional Info -->
+            <div class="mt-20 pt-10 border-t border-[#E5E5E5] grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-3">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]">Authenticity</h4>
+                    <p class="text-xs text-[#6B6B6B] leading-relaxed">Each piece comes with a physical certificate of authenticity, signed and dated by Tanvi Prajapat.</p>
+                </div>
+                <div class="space-y-3">
+                    <h4 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]">Shipping</h4>
+                    <p class="text-xs text-[#6B6B6B] leading-relaxed">Orders are carefully packaged in moisture-resistant tubes and shipped within 3-5 business days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

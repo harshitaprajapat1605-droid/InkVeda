@@ -1,0 +1,24 @@
+{% extends 'accounts/admin_dashboard.html' %}
+
+{% block dashboard_content %}
+<div class="max-w-xl mx-auto space-y-12 py-20">
+    <div class="bg-white p-12 text-center premium-shadow border border-[#E5E5E5] rounded-3xl reveal">
+        <div class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-8">
+            <svg class="w-10 h-10 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        </div>
+        
+        <h2 class="text-3xl font-serif mb-4 italic">Confirm Deletion</h2>
+        <p class="text-sm text-[#6B6B6B] mb-12 leading-relaxed">Are you certain you want to remove <strong class="text-[#1A1A1A]">"{{ item.title }}"</strong> from your collection? This action is permanent and cannot be undone.</p>
+        
+        <form method="POST" class="flex flex-col gap-4">
+            {% csrf_token %}
+            <button type="submit" class="w-full py-4 bg-red-500 text-white text-xs uppercase tracking-[0.3em] font-bold hover:bg-red-600 transition duration-300 rounded-full shadow-lg shadow-red-100">
+                Yes, Delete Masterpiece
+            </button>
+            <a href="{% url 'manage_artworks' %}" class="w-full py-4 text-center text-[#6B6B6B] text-xs uppercase tracking-[0.3em] font-bold hover:bg-gray-50 transition duration-300 rounded-full">
+                No, Keep It
+            </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

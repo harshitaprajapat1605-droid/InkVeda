@@ -1,0 +1,2591 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-03-27T10:58:35.861Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Butterfly Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Description\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.047Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "66",
+    "object_repr": "Order INKVEDA-K5HR - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "65",
+    "object_repr": "Order INKVEDA-S1TM - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "64",
+    "object_repr": "Order INKVEDA-MP1G - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "63",
+    "object_repr": "Order INKVEDA-BBWY - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "62",
+    "object_repr": "Order INKVEDA-A0MJ - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "61",
+    "object_repr": "Order INKVEDA-ISN7 - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "60",
+    "object_repr": "Order INKVEDA-HTYU - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "59",
+    "object_repr": "Order INKVEDA-YXB1 - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "58",
+    "object_repr": "Order INKVEDA-FRWV - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "57",
+    "object_repr": "Order INKVEDA-PK44 - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "56",
+    "object_repr": "Order INKVEDA-LGZO - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "55",
+    "object_repr": "Order INKVEDA-E4J6 - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "54",
+    "object_repr": "Order INKVEDA-OHTR - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "53",
+    "object_repr": "Order INKVEDA-D216 - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "52",
+    "object_repr": "Order INKVEDA-QWI0 - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "51",
+    "object_repr": "Order INKVEDA-U8UZ - Phase 2 User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "50",
+    "object_repr": "Order INKVEDA-8SFU - Shalini Rajput",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "49",
+    "object_repr": "Order INKVEDA-4URG - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Order INKVEDA-J3O4 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Order INKVEDA-RPPI - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "46",
+    "object_repr": "Order INKVEDA-G78O - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "45",
+    "object_repr": "Order INKVEDA-JTF8 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "44",
+    "object_repr": "Order INKVEDA-DB7G - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "43",
+    "object_repr": "Order INKVEDA-82ZE - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "42",
+    "object_repr": "Order INKVEDA-K26M - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "41",
+    "object_repr": "Order INKVEDA-DO13 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "40",
+    "object_repr": "Order INKVEDA-ANM4 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "39",
+    "object_repr": "Order INKVEDA-GXD4 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "38",
+    "object_repr": "Order INKVEDA-ATUE - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "37",
+    "object_repr": "Order INKVEDA-2AFY - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "36",
+    "object_repr": "Order INKVEDA-JNFP - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "35",
+    "object_repr": "Order INKVEDA-8OWD - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "34",
+    "object_repr": "Order INKVEDA-4PNR - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "Order INKVEDA-XLL6 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "32",
+    "object_repr": "Order INKVEDA-NTHJ - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "31",
+    "object_repr": "Order INKVEDA-IE91 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "30",
+    "object_repr": "Order INKVEDA-AT9F - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Order INKVEDA-40IX - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "28",
+    "object_repr": "Order INKVEDA-62L5 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Order INKVEDA-VNNH - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.048Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "Order INKVEDA-9NSV - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Order INKVEDA-PP9Z - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "Order INKVEDA-7RT6 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Order INKVEDA-3O9J - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "Order INKVEDA-IXG4 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "Order INKVEDA-ZPIV - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Order INKVEDA-DNT5 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Order INKVEDA-FCYL - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Order INKVEDA-CR89 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Order INKVEDA-XG4L - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Order INKVEDA-DKPC - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "Order INKVEDA-TVO5 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Order INKVEDA-NXDY - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Order INKVEDA-ILNE - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Order INKVEDA-LA4F - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Order INKVEDA-JDO2 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Order INKVEDA-9F14 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Order INKVEDA-TUJ1 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Order INKVEDA-B7XF - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Order INKVEDA-59QE - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Order INKVEDA-E06A - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Order INKVEDA-OKQ6 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Order INKVEDA-052H - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Order INKVEDA-DE03 - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Order INKVEDA-M39P - Ankit kushwah",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-03-27T11:51:07.049Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Order INKVEDA-EOLS - Test User",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-03-29T14:11:33.085Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Butterfly Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-03-29T14:14:29.052Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "71",
+    "object_repr": "Order INKVEDA-XFS0 - Subhadra Prajapat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Payment status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-03-29T14:17:11.685Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Butterfly Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-03-29T14:33:39.332Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Custom Order from Harshita prajapat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-03-29T14:39:16.367Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-03-29T14:39:32.914Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-03-29T14:41:34.987Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-03-29T14:43:13.911Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-03-29T14:43:13.911Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-03-29T14:48:59.160Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-03-29T14:49:01.674Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-03-29T14:52:16.619Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Custom Order from test user (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-03-29T15:04:14.146Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Custom Order from test user (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-03-29T15:19:26.238Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Custom Order from test user (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-03-29T15:35:22.984Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-03-29T15:48:22.455Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-03-29T15:59:47.694Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-03-29T16:02:55.343Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Final price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-03-29T16:03:48.381Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-03-29T16:07:43.742Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Final price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-03-29T16:10:44.510Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Final price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-03-29T16:11:21.334Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Custom Order from test user (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Custom Order from test user (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Custom Order from test user (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Custom Order from test user (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-03-29T16:13:12.276Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-03-29T16:15:41.415Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Final price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-03-29T16:16:39.824Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "Custom Order from Harshita prajapat (Pending)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-03-29T16:16:50.507Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-03-29T16:24:05.650Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-03-29T16:31:55.018Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Custom Order from Harshita prajapat (Accepted)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-03-29T17:12:38.827Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Typography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-03-29T17:14:13.471Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Butterfly Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-03-29T17:19:33.307Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "73",
+    "object_repr": "Order INKVEDA-U77V - Dev prajapat",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Payment status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-03-29T17:21:34.473Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "73",
+    "object_repr": "Order INKVEDA-U77V - Dev prajapat",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-03-29T17:30:58.144Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "73",
+    "object_repr": "Order INKVEDA-U77V - Dev prajapat",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-03-29T17:36:13.371Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Doodle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-03-29T17:39:45.632Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Zentangle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-03-30T05:48:03.646Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Doodle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-04-10T11:40:54.222Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Butterfly Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-04-10T11:43:39.410Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Butterfly Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-04-10T11:46:59.435Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Ganpati Mandala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-04-10T11:55:58.968Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Ganpati Mandala",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-04-16T05:34:04.854Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "Custom Order from ankit kushwah (Pending)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Final price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-04-16T05:34:17.075Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "Custom Order from ankit kushwah (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-04-23T11:52:35.170Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "3D Mandala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-04-23T11:59:25.266Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Zentangle",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-04-23T11:59:25.266Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Doodle",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-04-23T12:31:08.835Z",
+    "user": 3,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Custom Order from Shalini rajput (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-04-23T12:32:03.474Z",
+    "user": 3,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Custom Order from Shalini rajput (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Final price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-04-24T05:46:16.199Z",
+    "user": 3,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "Custom Order from Shalini rajput (Accepted)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-04-24T05:53:46.800Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Zentangle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-04-24T06:29:24.868Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Craft",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-04-24T06:33:22.126Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "craft",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-04-24T06:36:21.430Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Typography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-04-24T06:37:36.285Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Typography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-04-24T06:38:35.268Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Couple Dancing",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-04-24T06:40:26.678Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Mandala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-04-24T08:20:52.391Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Zentangle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-04-24T08:22:08.240Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Zentangle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-04-24T08:23:33.252Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Flower Mandala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-04-24T08:25:02.421Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "3D art",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-04-24T08:27:11.954Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "Trident",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-04-24T08:28:49.172Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "Typography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-04-24T08:29:46.959Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "Typography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-04-24T08:31:02.530Z",
+    "user": 3,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "Doodle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$rDWvfy3ettr5EtzmDKfLLM$Cr91Mdoqd2R4i1gIXESIISm9433WIbziN+vTXLgpmWA=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "tanvi",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-23T13:09:33.513Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$XyV8PJWtGtXYG5lLc6Fs43$/jrvwLm3UV68CXJT3B56FlTPrN9w5sdkUtNVOx5NN9g=",
+    "last_login": "2026-04-16T05:30:57.252Z",
+    "is_superuser": true,
+    "username": "tanvi2002",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-27T10:55:44.998Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$kUGtxGzjCZKjqxLD4xGolX$p7/jHvuDZ945+YwGZvIzzN6X6dVrwVO69gPWTchPNnw=",
+    "last_login": "2026-04-23T11:49:53.280Z",
+    "is_superuser": true,
+    "username": "inkveda",
+    "first_name": "",
+    "last_name": "",
+    "email": "inkv@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-23T11:48:23.097Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0d5z8xg8tgjdtbvh9gr85lj28kop5b09",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6bpa2Xh6J1vINt2sahpEwon478bEg56nZnMGybetzztTdZpSTCAhcsvCxyfUg6RHlzuVcVatnUJ6kjUaZsaa5LX7Wz_BplbhgEiWSQdOglCOvm56w2yFRKOVq4oAXtnmCyzsCbnrMfZISZJzqNhgs8X73k3_w:1w64s7:2wfPtgwHr2BG5UVlcKqrBGdrFSHcfWEikhotiRHvxeA",
+    "expire_date": "2026-04-10T10:56:59.429Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0es9fnmrq1sl4zi4b41941tsq74i1m9y",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6bpa2Xh6J1vINt2sahpEwon478bEg56nZnMGybetzztTdZpSTCAhcsvCxyfUg6RHlzuVcVatnUJ6kjUaZsaa5LX7Wz_BplbhgEiWSQdOglCOvm56w2yFRKOVq4oAXtnmCyzsCbnrMfZISZJzqNhgs8X73k3_w:1wDFJZ:xBfWa7cJJEsyYJQNAmjWWZIMwtTDkHo5Vw-vV8nsKNA",
+    "expire_date": "2026-04-30T05:30:57.274Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jjgjffmh56z5sv8sjh02lbf4qpbx3acm",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6bpa2Xh6J1vINt2sahpEwon478bEg56nZnMGybetzztTdZpSTCAhcsvCxyfUg6RHlzuVcVatnUJ6kjUaZsaa5LX7Wz_BplbhgEiWSQdOglCOvm56w2yFRKOVq4oAXtnmCyzsCbnrMfZISZJzqNhgs8X73k3_w:1wBADw:vDibVELDnqqLb0L_oHsxyNSDV73KagctnfpPO3t4FFM",
+    "expire_date": "2026-04-24T11:40:32.865Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yxcabha0k2oqi1q6cu1j37o9iq6zf220",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAQAP-yNbLW3vhKSc8borXXxgGUSDkqxN9RpBTQzozmDQPvWxv2tSzDKNADweWXJc7PMh1CHjzdZ5XnaVvGpI5EnXZVt1nK63q2f4PGa4MeHOaMjgL7YHSpJCihWrIhVR9j1BqdMWi5E46InrQ3ibhiCOSo8wKfL734NoE:1wFsZ7:TZBH3BRAE2PKC7FWGf8Z0eHt0Xp0iGYC-ztdb--UjbU",
+    "expire_date": "2026-05-07T11:49:53.295Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 1,
+  "fields": {
+    "title": "Butterfly Mandala",
+    "description": "A beautiful butterfly made with too much detailing.",
+    "image": "image/upload/inkveda/artworks/wlckqc1gscrwjonjfsux",
+    "category": "Mandala",
+    "price": "900.00",
+    "is_available": true,
+    "created_at": "2026-03-27T10:47:16.837Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 2,
+  "fields": {
+    "title": "Typography",
+    "description": "A motivational quote..",
+    "image": "image/upload/inkveda/artworks/nkewmbxdphmfopc3lign",
+    "category": "Typography",
+    "price": "250.00",
+    "is_available": true,
+    "created_at": "2026-03-29T17:12:38.817Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 5,
+  "fields": {
+    "title": "Doodle",
+    "description": "Radha Krishna doodle.",
+    "image": "image/upload/inkveda/artworks/wwcxtwk0xqgmjguwbyqb",
+    "category": "Doodle",
+    "price": "300.00",
+    "is_available": true,
+    "created_at": "2026-03-30T05:48:03.633Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 6,
+  "fields": {
+    "title": "Ganpati Mandala",
+    "description": "Ganpati ji mandala",
+    "image": "image/upload/inkveda/artworks/n8kgifpudmhiqrqonjea",
+    "category": "Mandala",
+    "price": "999.00",
+    "is_available": true,
+    "created_at": "2026-04-10T11:46:59.432Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 7,
+  "fields": {
+    "title": "3D Mandala",
+    "description": "3D mandala art with colorful pattern.",
+    "image": "image/upload/v1776945138/inkveda/artworks/by6a3t34gxz0fuakdgkp.jpg",
+    "category": "Mandala",
+    "price": "300.00",
+    "is_available": true,
+    "created_at": "2026-04-23T11:52:35.164Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 8,
+  "fields": {
+    "title": "Zentangle",
+    "description": "Colorful Zentangle pattern design.",
+    "image": "image/upload/v1777010009/inkveda/artworks/qnonzjgccf2h7cuzyria.jpg",
+    "category": "Zentangle",
+    "price": "349.99",
+    "is_available": true,
+    "created_at": "2026-04-24T05:53:46.794Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 9,
+  "fields": {
+    "title": "Craft",
+    "description": "Paper craft Lotus.",
+    "image": "image/upload/v1777012147/inkveda/artworks/nritwcvuhwqgxm3ffklp.jpg",
+    "category": "Craft",
+    "price": "50.00",
+    "is_available": true,
+    "created_at": "2026-04-24T06:29:24.859Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 10,
+  "fields": {
+    "title": "craft",
+    "description": "Sunflower paper craft.",
+    "image": "image/upload/v1777012385/inkveda/artworks/kfdcdj5rna7dvaw3mbzq.jpg",
+    "category": "Craft",
+    "price": "50.00",
+    "is_available": true,
+    "created_at": "2026-04-24T06:33:22.121Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 11,
+  "fields": {
+    "title": "Typography",
+    "description": "Quote in beautiful font.",
+    "image": "image/upload/v1777012564/inkveda/artworks/y2zh18cqxzgwxukycley.jpg",
+    "category": "Typography",
+    "price": "200.00",
+    "is_available": true,
+    "created_at": "2026-04-24T06:36:21.425Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 12,
+  "fields": {
+    "title": "Typography",
+    "description": "Different font styles.",
+    "image": "image/upload/v1777012639/inkveda/artworks/qtqxoiwyvxtlnx5rmmw3.jpg",
+    "category": "Typography",
+    "price": "150.00",
+    "is_available": true,
+    "created_at": "2026-04-24T06:37:36.279Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 13,
+  "fields": {
+    "title": "Couple Dancing",
+    "description": "Cute couple dancing shadow doodle art.",
+    "image": "image/upload/v1777012698/inkveda/artworks/es3ilv5isgz75zjy5mth.jpg",
+    "category": "Doodle",
+    "price": "300.00",
+    "is_available": true,
+    "created_at": "2026-04-24T06:38:35.262Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 14,
+  "fields": {
+    "title": "Mandala",
+    "description": "Beautiful detailed mandala design.",
+    "image": "image/upload/v1777012809/inkveda/artworks/asf0iz3wzaamqvmy1ybv.jpg",
+    "category": "Mandala",
+    "price": "1200.00",
+    "is_available": true,
+    "created_at": "2026-04-24T06:40:26.676Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 15,
+  "fields": {
+    "title": "Zentangle",
+    "description": "Zentangle design.",
+    "image": "image/upload/v1777018835/inkveda/artworks/yu61cucddr6jkeb845zy.jpg",
+    "category": "Zentangle",
+    "price": "499.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:20:52.386Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 16,
+  "fields": {
+    "title": "Zentangle",
+    "description": "zentangle design",
+    "image": "image/upload/v1777018911/inkveda/artworks/xl6w7fjwkx4fbllpnohw.jpg",
+    "category": "Zentangle",
+    "price": "500.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:22:08.235Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 17,
+  "fields": {
+    "title": "Flower Mandala",
+    "description": "Tulip flower with mandala touch.",
+    "image": "image/upload/v1777018996/inkveda/artworks/w1tuge1kqoy2koh1yrcr.jpg",
+    "category": "Mandala",
+    "price": "399.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:23:33.247Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 18,
+  "fields": {
+    "title": "3D art",
+    "description": "3D zentangle design.",
+    "image": "image/upload/v1777019085/inkveda/artworks/zrnyxwicvluizsqvxerl.jpg",
+    "category": "Zentangle",
+    "price": "299.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:25:02.416Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 19,
+  "fields": {
+    "title": "Trident",
+    "description": "Trishul with a mandala design.",
+    "image": "image/upload/v1777019214/inkveda/artworks/jwk4fhm7qzkdugp6reib.jpg",
+    "category": "Mandala",
+    "price": "450.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:27:11.949Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 20,
+  "fields": {
+    "title": "Typography",
+    "description": "Quote.",
+    "image": "image/upload/v1777019312/inkveda/artworks/rkoblzq4myoydujwbatn.jpg",
+    "category": "Typography",
+    "price": "200.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:28:49.169Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 21,
+  "fields": {
+    "title": "Typography",
+    "description": "Love coffee",
+    "image": "image/upload/v1777019369/inkveda/artworks/wmgqr65tmx4ci3fklegi.jpg",
+    "category": "Typography",
+    "price": "150.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:29:46.956Z"
+  }
+},
+{
+  "model": "artworks.artwork",
+  "pk": 22,
+  "fields": {
+    "title": "Doodle",
+    "description": "Women beautiful doodle.",
+    "image": "image/upload/v1777019445/inkveda/artworks/hznsd5rdtekyddpuo4no.jpg",
+    "category": "Doodle",
+    "price": "300.00",
+    "is_available": true,
+    "created_at": "2026-04-24T08:31:02.525Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 67,
+  "fields": {
+    "order_id": "INKVEDA-8JI1",
+    "artwork": 1,
+    "customer_name": "Fix Verification",
+    "email": "fix@example.com",
+    "phone": "8888888888",
+    "address": "Fix Address",
+    "quantity": 1,
+    "total_price": "999.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-03-27T11:56:45.812Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 68,
+  "fields": {
+    "order_id": "INKVEDA-AAAJ",
+    "artwork": 1,
+    "customer_name": "Test order",
+    "email": "testorder@gmail.com",
+    "phone": "8959897452",
+    "address": "test order 1",
+    "quantity": 1,
+    "total_price": "999.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-03-27T11:57:28.747Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 69,
+  "fields": {
+    "order_id": "INKVEDA-BEVZ",
+    "artwork": 1,
+    "customer_name": "Tanvi prajapat",
+    "email": "prajapattanvi5@gmail.com",
+    "phone": "07089089435",
+    "address": "38-G, gumasta nagar, Indore",
+    "quantity": 1,
+    "total_price": "999.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-03-29T14:08:22.368Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 70,
+  "fields": {
+    "order_id": "INKVEDA-XZ58",
+    "artwork": 1,
+    "customer_name": "Tanvi prajapat",
+    "email": "prajapattanvi5@gmail.com",
+    "phone": "07089089435",
+    "address": "38-G, gumasta nagar, Indore",
+    "quantity": 1,
+    "total_price": "999.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-03-29T14:09:56.267Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 71,
+  "fields": {
+    "order_id": "INKVEDA-XFS0",
+    "artwork": 1,
+    "customer_name": "Subhadra Prajapat",
+    "email": "subhadraprajapat612@gmail.com",
+    "phone": "7772051115",
+    "address": "38-G, gumasta nagar, Indore",
+    "quantity": 1,
+    "total_price": "10.00",
+    "status": "Confirmed",
+    "payment_method": "UPI",
+    "transaction_id": "T2603291942353189574640",
+    "payment_screenshot": null,
+    "payment_status": "Paid",
+    "created_at": "2026-03-29T14:12:34.072Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 72,
+  "fields": {
+    "order_id": "INKVEDA-E46A",
+    "artwork": 1,
+    "customer_name": "Anil prajapat",
+    "email": "anil@gmail.com",
+    "phone": "9827789435",
+    "address": "sector A",
+    "quantity": 1,
+    "total_price": "500.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-03-29T17:14:50.084Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 73,
+  "fields": {
+    "order_id": "INKVEDA-U77V",
+    "artwork": 1,
+    "customer_name": "Dev prajapat",
+    "email": "prajapatdebu@gmail.com",
+    "phone": "9039689435",
+    "address": "sector A, gumasta nagar",
+    "quantity": 1,
+    "total_price": "500.00",
+    "status": "Confirmed",
+    "payment_method": "UPI",
+    "transaction_id": "T2603292246340593774616",
+    "payment_screenshot": null,
+    "payment_status": "Paid",
+    "created_at": "2026-03-29T17:16:28.127Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 74,
+  "fields": {
+    "order_id": "INKVEDA-UUJI",
+    "artwork": 2,
+    "customer_name": "tanvi prajapat",
+    "email": "prajapattanvi5@gmail.com",
+    "phone": "07089089435",
+    "address": "gumasta nagar",
+    "quantity": 1,
+    "total_price": "250.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-04-06T05:53:55.206Z"
+  }
+},
+{
+  "model": "artworks.order",
+  "pk": 75,
+  "fields": {
+    "order_id": "INKVEDA-2EYR",
+    "artwork": 1,
+    "customer_name": "tanvi prajapat",
+    "email": "prajapattanvi5@gmail.com",
+    "phone": "07089089435",
+    "address": "sector A",
+    "quantity": 1,
+    "total_price": "500.00",
+    "status": "Pending",
+    "payment_method": "UPI",
+    "transaction_id": null,
+    "payment_screenshot": null,
+    "payment_status": "Pending",
+    "created_at": "2026-04-06T15:22:46.219Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 18,
+  "fields": {
+    "name": "Harshita prajapat",
+    "email": "harshitaprajapat1605@gmail.com",
+    "phone": "7470989435",
+    "art_type": "Zentangle",
+    "size": "A5",
+    "detail_level": "Simple",
+    "color_preference": "Black & White",
+    "description": "unique pattern design",
+    "reference_image": null,
+    "deadline": "2026-04-01",
+    "estimated_price": null,
+    "final_price": "600.00",
+    "is_price_confirmed": false,
+    "status": "Accepted",
+    "payment_status": "Pending",
+    "created_at": "2026-03-29T16:15:07.105Z",
+    "updated_at": "2026-04-23T12:41:11.241Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 19,
+  "fields": {
+    "name": "ankit kushwah",
+    "email": "ak0313360@gmail.com",
+    "phone": "9977876391",
+    "art_type": "Mandala",
+    "size": "A5",
+    "detail_level": "Detailed",
+    "color_preference": "Black & White",
+    "description": "old art",
+    "reference_image": null,
+    "deadline": "2026-04-16",
+    "estimated_price": null,
+    "final_price": null,
+    "is_price_confirmed": false,
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-04-16T05:33:06.642Z",
+    "updated_at": "2026-04-23T12:41:11.241Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 20,
+  "fields": {
+    "name": "ankit kushwah",
+    "email": "ak0313360@gmail.com",
+    "phone": "9977876391",
+    "art_type": "Mandala",
+    "size": "A5",
+    "detail_level": "Detailed",
+    "color_preference": "Black & White",
+    "description": "old art",
+    "reference_image": null,
+    "deadline": "2026-04-16",
+    "estimated_price": null,
+    "final_price": "800.00",
+    "is_price_confirmed": false,
+    "status": "Accepted",
+    "payment_status": "Pending",
+    "created_at": "2026-04-16T05:33:09.616Z",
+    "updated_at": "2026-04-23T12:41:11.241Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 21,
+  "fields": {
+    "name": "Shalini rajput",
+    "email": "shaliniraj88000@gmail.com",
+    "phone": "9874562013",
+    "art_type": "Mandala",
+    "size": "A5",
+    "detail_level": "Simple",
+    "color_preference": "Black & White",
+    "description": "i have uploaded a reference image.",
+    "reference_image": "image/upload/v1776947398/inkveda/custom_orders/uleyggemudqn9hcni93c.jpg",
+    "deadline": "2026-04-26",
+    "estimated_price": null,
+    "final_price": "300.00",
+    "is_price_confirmed": false,
+    "status": "Accepted",
+    "payment_status": "Pending",
+    "created_at": "2026-04-23T12:30:15.056Z",
+    "updated_at": "2026-04-23T12:41:11.241Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 22,
+  "fields": {
+    "name": "Shalini rajput",
+    "email": "shaliniraj88000@gmail.com",
+    "phone": "9874562013",
+    "art_type": "Mandala",
+    "size": "A5",
+    "detail_level": "Simple",
+    "color_preference": "Black & White",
+    "description": "i have uploaded a reference image.",
+    "reference_image": "image/upload/v1776948287/inkveda/custom_orders/sdff3nqvkrwukphvka6w.jpg",
+    "deadline": "2026-04-26",
+    "estimated_price": "300.00",
+    "final_price": null,
+    "is_price_confirmed": false,
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-04-23T12:45:03.757Z",
+    "updated_at": "2026-04-23T12:45:03.757Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 23,
+  "fields": {
+    "name": "Ajay kumar",
+    "email": "ak0313360@gmail.com",
+    "phone": "9977876391",
+    "art_type": "Mandala",
+    "size": "A4",
+    "detail_level": "Detailed",
+    "color_preference": "Black & White",
+    "description": "image uploaded",
+    "reference_image": "image/upload/v1776948473/inkveda/custom_orders/g3qneo8afnlxw5z7r6ug.png",
+    "deadline": "2026-04-23",
+    "estimated_price": "1300.00",
+    "final_price": null,
+    "is_price_confirmed": false,
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-04-23T12:48:10.524Z",
+    "updated_at": "2026-04-23T12:48:10.524Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 24,
+  "fields": {
+    "name": "Ajay kumar",
+    "email": "ak0313360@gmail.com",
+    "phone": "9977876391",
+    "art_type": "Mandala",
+    "size": "A4",
+    "detail_level": "Detailed",
+    "color_preference": "Black & White",
+    "description": "image uploaded",
+    "reference_image": "image/upload/v1776948478/inkveda/custom_orders/ygokj9jnd4bjqexzgvam.png",
+    "deadline": "2026-04-23",
+    "estimated_price": "1300.00",
+    "final_price": null,
+    "is_price_confirmed": false,
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-04-23T12:48:15.040Z",
+    "updated_at": "2026-04-23T12:48:15.040Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 25,
+  "fields": {
+    "name": "Ajay kumar",
+    "email": "ak0313360@gmail.com",
+    "phone": "9977876391",
+    "art_type": "Mandala",
+    "size": "A4",
+    "detail_level": "Detailed",
+    "color_preference": "Black & White",
+    "description": "image uploaded",
+    "reference_image": "image/upload/v1776949402/inkveda/custom_orders/flwv0u2ceyp7y2fzjuwj.png",
+    "deadline": "2026-04-23",
+    "estimated_price": "1300.00",
+    "final_price": null,
+    "is_price_confirmed": false,
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-04-23T13:03:38.995Z",
+    "updated_at": "2026-04-23T13:03:38.995Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 26,
+  "fields": {
+    "name": "Ajay kumar",
+    "email": "ak0313360@gmail.com",
+    "phone": "9977876391",
+    "art_type": "Mandala",
+    "size": "A4",
+    "detail_level": "Simple",
+    "color_preference": "Black & White",
+    "description": "reference pi uploaded.",
+    "reference_image": "image/upload/v1776949454/inkveda/custom_orders/vb5hyugkhdhuxkrvardg.jpg",
+    "deadline": "2026-04-23",
+    "estimated_price": "600.00",
+    "final_price": null,
+    "is_price_confirmed": false,
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-04-23T13:04:30.899Z",
+    "updated_at": "2026-04-23T13:04:30.899Z"
+  }
+},
+{
+  "model": "artworks.customorder",
+  "pk": 27,
+  "fields": {
+    "name": "Shalini rajput",
+    "email": "shaliniraj88000@gmail.com",
+    "phone": "9874562013",
+    "art_type": "Mandala",
+    "size": "A5",
+    "detail_level": "Simple",
+    "color_preference": "Black & White",
+    "description": "",
+    "reference_image": "image/upload/v1777009492/inkveda/custom_orders/eoydvtungvmpxirlja9q.jpg",
+    "deadline": "2026-04-27",
+    "estimated_price": "300.00",
+    "final_price": "300.00",
+    "is_price_confirmed": false,
+    "status": "Accepted",
+    "payment_status": "Pending",
+    "created_at": "2026-04-24T05:45:09.398Z",
+    "updated_at": "2026-04-24T05:46:12.201Z"
+  }
+}
+]

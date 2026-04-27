@@ -1,0 +1,38 @@
+{% extends 'accounts/admin_dashboard.html' %}
+
+{% block dashboard_content %}
+<div class="max-w-3xl mx-auto space-y-12">
+    <header class="text-center space-y-2">
+        <h1 class="text-4xl font-serif">{{ title }}</h1>
+        <p class="text-sm text-[#6B6B6B] font-light">Enter the details of your latest pattern and story.</p>
+    </header>
+
+    <div class="bg-white p-10 md:p-16 premium-shadow border border-[#E5E5E5] rounded-3xl reveal">
+        <form method="POST" enctype="multipart/form-data" class="space-y-8">
+            {% csrf_token %}
+            
+            {% for field in form %}
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-[#6B6B6B] font-bold">{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                <p class="text-red-400 text-[10px] uppercase tracking-widest mt-2">{{ field.errors.0 }}</p>
+                {% endif %}
+                {% if field.help_text %}
+                <p class="text-[#C2A878] text-[9px] italic mt-1">{{ field.help_text }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+            <div class="pt-8 flex flex-col md:flex-row gap-4">
+                <button type="submit" class="flex-grow py-4 bg-[#1A1A1A] text-white text-xs uppercase tracking-[0.3em] font-bold hover:bg-[#C2A878] transition duration-500 rounded-full">
+                    Save Masterpiece
+                </button>
+                <a href="{% url 'manage_artworks' %}" class="flex-grow py-4 text-center border border-[#E5E5E5] text-[#6B6B6B] text-xs uppercase tracking-[0.3em] font-bold hover:bg-gray-50 transition duration-300 rounded-full">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

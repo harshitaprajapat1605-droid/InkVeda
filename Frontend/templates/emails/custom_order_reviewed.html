@@ -1,0 +1,25 @@
+<html>
+<body style="font-family: 'Playfair Display', serif; background-color: #F5F3EF; color: #1A1A1A; padding: 40px;">
+    <div style="max-width: 600px; margin: auto; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+        <h1 style="text-align: center; color: #C2A878;">InkVeda</h1>
+        <h2 style="font-weight: 300; border-bottom: 1px solid #F5F3EF; padding-bottom: 20px;">Your Custom Artwork is Ready for the Next Step</h2>
+        
+        <p>Dear {{ order.name }},</p>
+        <p>We have reviewed your request for <strong>{{ order.art_type }}</strong>. It is a beautiful vision, and we are excited to bring it to life.</p>
+        
+        <div style="background: #F5F3EF; padding: 20px; border-radius: 10px; margin: 20px 0;">
+            <p style="margin: 0; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Confirmed Investment</p>
+            <p style="font-size: 32px; margin: 10px 0;">₹{{ order.final_price }}</p>
+        </div>
+
+        <p>To begin the creation process, please complete the payment using the link below:</p>
+        
+        <a href="{{ site_url }}{% url 'custom_order_payment' order.id %}" style="display: block; background: #1A1A1A; color: #fff; text-decoration: none; text-align: center; padding: 20px; border-radius: 10px; font-weight: bold; margin: 30px 0; text-transform: uppercase; letter-spacing: 3px;">
+            Securely Settle Account
+        </a>
+
+        <p style="font-size: 12px; color: #6B6B6B;">Tracking ID: {{ order.tracking_id }}</p>
+        <p style="font-size: 12px; color: #6B6B6B;">You can track your artwork journey anytime at <a href="{{ site_url }}{% url 'track_order' %}" style="color: #C2A878;">inkveda.in/track-order</a></p>
+    </div>
+</body>
+</html>

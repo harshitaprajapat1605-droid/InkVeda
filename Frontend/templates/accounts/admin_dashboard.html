@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="min-h-screen bg-[#FDFDFD] flex flex-col md:flex-row">
+    <!-- Admin Sidebar -->
+    <aside class="w-full md:w-64 bg-white border-r border-[#E5E5E5] p-8 space-y-12">
+        <div class="space-y-2">
+            <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#C2A878]">Management</h3>
+            <nav class="flex flex-col space-y-4">
+                <a href="{% url 'admin_analytics' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'admin_analytics' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Analytics</a>
+                <a href="{% url 'custom_order_dashboard' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'custom_order_dashboard' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Custom Orders</a>
+                <a href="{% url 'manage_artworks' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'manage_artworks' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Manage Artworks</a>
+            </nav>
+        </div>
+
+        <div class="space-y-2">
+            <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#C2A878]">Quick Actions</h3>
+            <nav class="flex flex-col space-y-4">
+                <a href="{% url 'add_artwork' %}" class="text-xs uppercase tracking-widest text-[#6B6B6B] hover:text-[#C2A878] transition">+ New Artwork</a>
+                <a href="#" class="text-xs uppercase tracking-widest text-[#6B6B6B] hover:text-[#C2A878] transition">Recent Sales</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow p-8 lg:p-16">
+        <div class="max-w-6xl mx-auto reveal">
+            {% block dashboard_content %}
+            <div class="space-y-8">
+                <header class="space-y-2">
+                    <h1 class="text-4xl font-serif">Studio <span class="italic text-[#C2A878]">Overview</span></h1>
+                    <p class="text-sm text-[#6B6B6B] font-light">Welcome back, Tanvi. Here is the latest from your studio.</p>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-white border border-[#E5E5E5] rounded-2xl premium-shadow">
+                        <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Pending Orders</p>
+                        <h4 class="text-3xl font-serif text-[#1A1A1A]">05</h4>
+                    </div>
+                    <div class="p-8 bg-white border border-[#E5E5E5] rounded-2xl premium-shadow">
+                        <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Active Commissions</p>
+                        <h4 class="text-3xl font-serif text-[#1A1A1A]">03</h4>
+                    </div>
+                    <div class="p-8 bg-white border border-[#E5E5E5] rounded-2xl premium-shadow">
+                        <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Monthly Revenue</p>
+                        <h4 class="text-3xl font-serif text-[#1A1A1A]">₹12,500</h4>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Placeholder -->
+                <div class="bg-white border border-[#E5E5E5] rounded-2xl premium-shadow p-8">
+                    <h3 class="text-xs uppercase tracking-widest font-bold mb-8">Recent Studio Activity</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center pb-4 border-b border-[#F5F3EF]">
+                            <p class="text-xs text-[#1A1A1A]">New custom order from <strong>Aman Sharma</strong></p>
+                            <span class="text-[10px] text-[#6B6B6B]">2 mins ago</span>
+                        </div>
+                        <div class="flex justify-between items-center pb-4 border-b border-[#F5F3EF]">
+                            <p class="text-xs text-[#1A1A1A]">Payment confirmed for <strong>Mandala #42</strong></p>
+                            <span class="text-[10px] text-[#6B6B6B]">1 hour ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </main>
+</section>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'accounts/admin_dashboard.html' %}
+
+{% block dashboard_content %}
+<div class="space-y-12">
+    <header class="flex justify-between items-end">
+        <div>
+            <h1 class="text-4xl font-serif">Artist <span class="italic text-[#C2A878]">Analytics</span></h1>
+            <p class="text-sm text-[#6B6B6B] font-light">Detailed performance metrics of your studio.</p>
+        </div>
+        <div class="text-right">
+            <p class="text-[10px] text-gray-400 italic">"Patterns tell stories, analytics tell the journey."</p>
+        </div>
+    </header>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 premium-shadow rounded-2xl border-l-4 border-[#1A1A1A]">
+            <p class="text-[10px] uppercase tracking-widest text-[#6B6B6B] mb-2 font-bold">Total Revenue</p>
+            <h3 class="text-3xl font-serif">₹{{ total_revenue|floatformat:0 }}</h3>
+            <p class="text-[10px] text-[#C2A878] mt-2 italic">Monthly: ₹{{ monthly_revenue|floatformat:0 }}</p>
+        </div>
+        <div class="bg-white p-8 premium-shadow rounded-2xl border-l-4 border-[#C2A878]">
+            <p class="text-[10px] uppercase tracking-widest text-[#6B6B6B] mb-2 font-bold">Total Orders</p>
+            <h3 class="text-3xl font-serif">{{ total_orders }}</h3>
+            <p class="text-[10px] text-[#C2A878] mt-2 italic">Today: {{ today_orders }}</p>
+        </div>
+        <div class="bg-white p-8 premium-shadow rounded-2xl border-l-4 border-[#C2A878]">
+            <p class="text-[10px] uppercase tracking-widest text-[#6B6B6B] mb-2 font-bold">Pending Delivery</p>
+            <h3 class="text-3xl font-serif">{{ pending_orders }}</h3>
+            <p class="text-[10px] text-red-400 mt-2 italic">Requires attention</p>
+        </div>
+        <div class="bg-white p-8 premium-shadow rounded-2xl border-l-4 border-[#C2A878]">
+            <p class="text-[10px] uppercase tracking-widest text-[#6B6B6B] mb-2 font-bold">Total Portfolio</p>
+            <h3 class="text-3xl font-serif">{{ total_artworks }}</h3>
+            <p class="text-[10px] text-[#C2A878] mt-2 italic">Active in gallery</p>
+        </div>
+    </div>
+
+    <!-- Recent Orders -->
+    <div class="bg-white premium-shadow rounded-2xl border border-[#E5E5E5] overflow-hidden">
+        <div class="p-8 border-b border-[#F5F3EF] flex justify-between items-center">
+            <h2 class="text-xs uppercase tracking-widest font-bold">Recent Successful Orders</h2>
+            <a href="/admin/artworks/order/" class="text-[10px] uppercase tracking-widest border-b border-[#1A1A1A] pb-1 hover:text-[#C2A878] hover:border-[#C2A878] transition">Manage All</a>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+                <thead class="bg-[#F5F3EF] text-[10px] uppercase tracking-widest text-[#6B6B6B]">
+                    <tr>
+                        <th class="px-8 py-5 font-bold">Order ID</th>
+                        <th class="px-8 py-5 font-bold">Customer</th>
+                        <th class="px-8 py-5 font-bold">Artwork</th>
+                        <th class="px-8 py-5 font-bold">Amount</th>
+                        <th class="px-8 py-5 font-bold">Date</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-[#F5F3EF]">
+                    {% for order in recent_orders %}
+                    <tr class="hover:bg-[#FAFAFA] transition duration-300">
+                        <td class="px-8 py-5 font-bold text-xs">{{ order.order_id }}</td>
+                        <td class="px-8 py-5">
+                            <p class="font-bold text-[#1A1A1A]">{{ order.customer_name }}</p>
+                            <p class="text-[10px] text-[#6B6B6B]">{{ order.email }}</p>
+                        </td>
+                        <td class="px-8 py-5">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-10 bg-[#F5F3EF] flex-shrink-0">
+                                    <img src="{{ order.artwork.image.url }}" class="w-full h-full object-cover rounded-sm">
+                                </div>
+                                <span class="text-xs">{{ order.artwork.title }}</span>
+                            </div>
+                        </td>
+                        <td class="px-8 py-5 font-bold text-[#1A1A1A]">₹{{ order.total_price }}</td>
+                        <td class="px-8 py-5 text-xs text-[#6B6B6B]">{{ order.created_at|date:"d M Y" }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="px-8 py-20 text-center italic text-[#6B6B6B] font-serif">No successful orders found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

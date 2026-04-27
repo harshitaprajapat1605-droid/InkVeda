@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-32 px-6 lg:px-16 reveal">
+    <div class="max-w-3xl mx-auto">
+        <header class="text-center mb-16 space-y-4">
+            <h1 class="text-5xl font-serif">Track Your Journey</h1>
+            <p class="text-[#6B6B6B] max-w-lg mx-auto italic">Follow the progress of your handcrafted artwork from our studio to your home.</p>
+        </header>
+
+        <div class="bg-white p-10 md:p-16 premium-shadow rounded-2xl border border-[#E5E5E5] mb-20 reveal">
+            <form method="POST" class="space-y-10">
+                {% csrf_token %}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-[0.3em] text-[#C2A878] font-bold">Tracking ID</label>
+                        <input type="text" name="order_id" placeholder="INKVEDA-XXXXXXXX" class="w-full p-4 bg-[#F5F3EF] border border-transparent focus:border-[#C2A878] focus:bg-white rounded-lg transition-all outline-none text-sm placeholder:text-[#6B6B6B]/30" required>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-[0.3em] text-[#C2A878] font-bold">Email Address</label>
+                        <input type="email" name="email" placeholder="email@example.com" class="w-full p-4 bg-[#F5F3EF] border border-transparent focus:border-[#C2A878] focus:bg-white rounded-lg transition-all outline-none text-sm placeholder:text-[#6B6B6B]/30" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-premium w-full py-6 text-xs uppercase tracking-[0.3em] font-bold shadow-lg shadow-[#1A1A1A]/10">Track Status</button>
+            </form>
+
+            {% if error_message %}
+            <div class="mt-10 p-5 bg-red-50 text-red-600 text-xs text-center font-medium border border-red-100 rounded-lg animate-fadeIn">
+                {{ error_message }}
+            </div>
+            {% endif %}
+        </div>
+
+        {% if order %}
+        <div class="bg-white p-10 md:p-16 premium-shadow rounded-2xl border-t-4 border-[#C2A878] reveal">
+            <h2 class="text-xs uppercase tracking-[0.4em] font-bold mb-12 flex items-center text-[#1A1A1A]">
+                <span class="w-2 h-2 bg-[#C2A878] rounded-full mr-4"></span>
+                Order Status: <span class="ml-2 text-[#C2A878] italic">{{ order.status }}</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-semibold">Artwork</p>
+                    <p class="font-serif text-lg">{{ order.artwork.title }}</p>
+                    <p class="text-[10px] text-[#6B6B6B]">Quantity: {{ order.quantity }}</p>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-semibold">Payment</p>
+                    <span class="inline-block px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] font-bold rounded-full 
+                        {% if order.payment_status == 'Paid' %}bg-green-50 text-green-600 border border-green-100{% elif order.payment_status == 'Failed' %}bg-red-50 text-red-600 border border-red-100{% else %}bg-[#F5F3EF] text-[#6B6B6B] border border-[#E5E5E5]{% endif %}">
+                        {{ order.payment_status }}
+                    </span>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-semibold">Date</p>
+                    <p class="text-xs font-medium text-[#1A1A1A]">{{ order.created_at|date:"d M Y" }}</p>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-10 border-t border-[#F5F3EF]">
+                <div class="flex items-center space-x-6">
+                    <div class="w-16 h-20 bg-[#F5F3EF] rounded-lg overflow-hidden shrink-0">
+                        <img src="{{ order.artwork.image.url }}" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="text-sm text-[#6B6B6B] leading-relaxed italic font-light">
+                            {% if order.status == 'Pending' %} Your order has been securely received. Our artist is preparing to pack your story.
+                            {% elif order.status == 'Confirmed' %} Excellence takes time. Your artwork is being carefully prepared for transit.
+                            {% else %} Your order is in progress. Thank you for your patience.
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% elif custom_order %}
+        <div class="bg-white p-10 md:p-16 premium-shadow rounded-2xl border-t-4 border-[#C2A878] reveal">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
+                <div>
+                   <h2 class="text-xs uppercase tracking-[0.4em] font-bold text-[#1A1A1A] flex items-center">
+                    <span class="w-2 h-2 bg-[#C2A878] rounded-full mr-4"></span>
+                    Custom Project Tracking
+                    </h2>
+                    <p class="text-[10px] text-[#6B6B6B] mt-2">{{ custom_order.tracking_id }} | Received on {{ custom_order.created_at|date:"d M Y" }}</p>
+                </div>
+                <span class="px-6 py-2 bg-[#F5F3EF] text-[10px] uppercase tracking-widest font-bold border border-[#C2A878] text-[#C2A878] rounded-full">
+                    {{ custom_order.get_status_display }}
+                </span>
+            </div>
+
+            <!-- Tracking Timeline -->
+            <div class="relative mb-20 px-4">
+                <div class="absolute top-1/2 left-0 w-full h-[2px] bg-[#F5F3EF] -translate-y-1/2 hidden md:block"></div>
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-8 relative">
+                    {% with status=custom_order.status %}
+                    <!-- Stage 1: Received -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold z-10 
+                             bg-[#1A1A1A] text-white border-4 border-white shadow-sm">01</div>
+                        <p class="text-[9px] uppercase tracking-widest font-bold text-[#1A1A1A]">Inquiry</p>
+                    </div>
+                    <!-- Stage 2: Reviewed -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold z-10 
+                             {% if status != 'Pending' %}bg-[#1A1A1A] text-white{% else %}bg-white text-[#E5E5E5]{% endif %} border-4 border-white shadow-sm">02</div>
+                        <p class="text-[9px] uppercase tracking-widest font-bold {% if status != 'Pending' %}text-[#1A1A1A]{% else %}text-[#E5E5E5]{% endif %}">Review</p>
+                    </div>
+                    <!-- Stage 3: Accepted -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold z-10 
+                             {% if status != 'Pending' %}bg-[#1A1A1A] text-white{% else %}bg-white text-[#E5E5E5]{% endif %} border-4 border-white shadow-sm">03</div>
+                        <p class="text-[9px] uppercase tracking-widest font-bold {% if status != 'Pending' %}text-[#1A1A1A]{% else %}text-[#E5E5E5]{% endif %}">Accepted</p>
+                    </div>
+                    <!-- Stage 4: In Progress -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold z-10 
+                             {% if status == 'In Progress' or status == 'Completed' %}bg-[#1A1A1A] text-white{% else %}bg-white text-[#E5E5E5]{% endif %} border-4 border-white shadow-sm">04</div>
+                        <p class="text-[9px] uppercase tracking-widest font-bold {% if status == 'In Progress' or status == 'Completed' %}text-[#1A1A1A]{% else %}text-[#E5E5E5]{% endif %}">Creation</p>
+                    </div>
+                    <!-- Stage 5: Completed -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold z-10 
+                             {% if status == 'Completed' %}bg-green-500 text-white{% else %}bg-white text-[#E5E5E5]{% endif %} border-4 border-white shadow-sm">05</div>
+                        <p class="text-[9px] uppercase tracking-widest font-bold {% if status == 'Completed' %}text-green-500{% else %}text-[#E5E5E5]{% endif %}">Delivery</p>
+                    </div>
+                     <!-- Reserved for Rejections -->
+                     {% if status == 'Rejected' %}
+                     <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-bold z-10 bg-red-500 text-white border-4 border-white shadow-sm">X</div>
+                        <p class="text-[9px] uppercase tracking-widest font-bold text-red-500">Rejected</p>
+                    </div>
+                     {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 p-8 bg-[#FDFDFD] border border-[#F5F3EF] rounded-3xl">
+                <div class="space-y-4">
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-semibold">Vision Specifications</p>
+                    <p class="font-serif text-xl">{{ custom_order.art_type }}</p>
+                    <p class="text-xs text-[#6B6B6B] leading-relaxed italic">"{{ custom_order.description|default:'No vision provided'|truncatewords:20 }}"</p>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-semibold">Investment</p>
+                    <div class="space-y-1">
+                        <p class="font-serif text-3xl text-[#1A1A1A]">₹{{ custom_order.final_price }}</p>
+                        {% if custom_order.status != 'Pending' and custom_order.status != 'Rejected' %}
+                            <p class="text-[9px] text-green-600 font-bold uppercase tracking-widest">Pricing Confirmed</p>
+                        {% else %}
+                            <p class="text-[8px] text-[#C2A878] italic">*Price Confirmation Pending Review</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            {% if custom_order.status == 'Accepted' and custom_order.payment_status == 'Pending' %}
+            <div class="p-12 bg-[#1A1A1A] text-white rounded-3xl text-center space-y-10 reveal active">
+                <div class="space-y-4">
+                    <h3 class="text-3xl font-serif">Propose to Creation</h3>
+                    <p class="text-gray-400 font-light leading-relaxed max-w-md mx-auto">Your vision has been accepted. To initiate the intricate inkwork, please proceed with the confirmed investment of ₹{{ custom_order.final_price }}.</p>
+                </div>
+                <a href="{% url 'custom_order_payment' custom_order.id %}" class="btn-premium bg-[#C2A878] border-none px-16 py-6 inline-block text-[10px] uppercase tracking-[0.3em] font-bold shadow-2xl shadow-[#C2A878]/30">
+                    Settle Account & Begin Project
+                </a>
+            </div>
+            {% elif custom_order.status == 'Pending' %}
+            <div class="text-center p-12 border-2 border-dashed border-[#F5F3EF] rounded-3xl">
+                <p class="text-sm text-[#6B6B6B] font-light leading-relaxed italic">Your story is currently on the artist's desk. We are analyzing the complexity and required resources.</p>
+            </div>
+            {% elif custom_order.status == 'Rejected' %}
+            <div class="text-center p-12 bg-red-50 border border-red-100 rounded-3xl">
+                <p class="text-sm text-red-600 font-medium">Unfortunately, we cannot proceed with this request at this time. Please check your email for details.</p>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+    </div>
+</section>
+{% endblock %}
