@@ -10,6 +10,5 @@ Backend/.env
 Backend/db.sqlite3
 Backend/__pycache__/
 Frontend/media/
-Frontend/static/
 email_test_output.txt
 datadump*.json
