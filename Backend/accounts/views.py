@@ -40,7 +40,30 @@ def dashboard(request):
 
 from .decorators import admin_only
 
+from artworks.models import Order, CustomOrder, Artwork
+from django.db.models import Sum
+
 @login_required
 @admin_only
 def admin_dashboard(request):
-    return render(request, 'accounts/admin_dashboard.html')
+    pending_orders = Order.objects.filter(status='Pending').count()
+    active_commissions = CustomOrder.objects.exclude(status='Completed').count()
+    monthly_revenue = Order.objects.filter(payment_status='Paid').aggregate(Sum('total_price'))['total_price__sum'] or 0
+    
+    recent_orders = list(Order.objects.all().order_by('-created_at')[:5])
+    recent_custom = list(CustomOrder.objects.all().order_by('-created_at')[:5])
+    
+    # Combine and sort activities by date
+    activities = sorted(
+        recent_orders + recent_custom, 
+        key=lambda x: x.created_at, 
+        reverse=True
+    )[:5]
+    
+    context = {
+        'pending_orders': pending_orders,
+        'active_commissions': active_commissions,
+        'monthly_revenue': monthly_revenue,
+        'activities': activities,
+    }
+    return render(request, 'accounts/admin_dashboard.html', context)

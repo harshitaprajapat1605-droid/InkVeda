@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'admin_base.html' %}
 
 {% block content %}
 <section class="min-h-screen bg-[#FDFDFD] flex flex-col md:flex-row">
@@ -35,30 +35,36 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="p-8 bg-white border border-[#E5E5E5] rounded-2xl premium-shadow">
                         <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Pending Orders</p>
-                        <h4 class="text-3xl font-serif text-[#1A1A1A]">05</h4>
+                        <h4 class="text-3xl font-serif text-[#1A1A1A]">{{ pending_orders|stringformat:"02d" }}</h4>
                     </div>
                     <div class="p-8 bg-white border border-[#E5E5E5] rounded-2xl premium-shadow">
                         <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Active Commissions</p>
-                        <h4 class="text-3xl font-serif text-[#1A1A1A]">03</h4>
+                        <h4 class="text-3xl font-serif text-[#1A1A1A]">{{ active_commissions|stringformat:"02d" }}</h4>
                     </div>
                     <div class="p-8 bg-white border border-[#E5E5E5] rounded-2xl premium-shadow">
-                        <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Monthly Revenue</p>
-                        <h4 class="text-3xl font-serif text-[#1A1A1A]">₹12,500</h4>
+                        <p class="text-[9px] uppercase tracking-widest text-[#C2A878] font-bold mb-2">Total Revenue</p>
+                        <h4 class="text-3xl font-serif text-[#1A1A1A]">₹{{ monthly_revenue|floatformat:0 }}</h4>
                     </div>
                 </div>
 
-                <!-- Recent Activity Placeholder -->
+                <!-- Recent Activity -->
                 <div class="bg-white border border-[#E5E5E5] rounded-2xl premium-shadow p-8">
                     <h3 class="text-xs uppercase tracking-widest font-bold mb-8">Recent Studio Activity</h3>
                     <div class="space-y-6">
+                        {% for activity in activities %}
                         <div class="flex justify-between items-center pb-4 border-b border-[#F5F3EF]">
-                            <p class="text-xs text-[#1A1A1A]">New custom order from <strong>Aman Sharma</strong></p>
-                            <span class="text-[10px] text-[#6B6B6B]">2 mins ago</span>
+                            <p class="text-xs text-[#1A1A1A]">
+                                {% if activity.order_id %}
+                                    New order <strong>{{ activity.order_id }}</strong> from {{ activity.customer_name }}
+                                {% else %}
+                                    New custom commission from <strong>{{ activity.name }}</strong>
+                                {% endif %}
+                            </p>
+                            <span class="text-[10px] text-[#6B6B6B]">{{ activity.created_at|timesince }} ago</span>
                         </div>
-                        <div class="flex justify-between items-center pb-4 border-b border-[#F5F3EF]">
-                            <p class="text-xs text-[#1A1A1A]">Payment confirmed for <strong>Mandala #42</strong></p>
-                            <span class="text-[10px] text-[#6B6B6B]">1 hour ago</span>
-                        </div>
+                        {% empty %}
+                        <p class="text-xs text-[#6B6B6B] italic text-center py-4">No recent activity found.</p>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
