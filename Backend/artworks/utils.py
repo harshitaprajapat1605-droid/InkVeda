@@ -21,7 +21,7 @@ def send_order_emails(order):
             to=[order.email]
         )
         email_customer.attach_alternative(html_content_customer, "text/html")
-        email_customer.send()
+        email_customer.send(fail_silently=True)
 
         # Email to Artist (Tanvi)
         html_content_artist = render_to_string('emails/order_success_admin.html', context)
@@ -34,7 +34,7 @@ def send_order_emails(order):
             to=[getattr(settings, 'ARTIST_EMAIL', 'prajapattanvi5@gmail.com')]
         )
         email_artist.attach_alternative(html_content_artist, "text/html")
-        email_artist.send()
+        email_artist.send(fail_silently=True)
         
     except Exception as e:
         print(f"Email error in send_order_emails: {e}")
@@ -56,7 +56,7 @@ def send_custom_order_submission_emails(order):
             to=[order.email]
         )
         email_customer.attach_alternative(html_content_customer, "text/html")
-        email_customer.send()
+        email_customer.send(fail_silently=True)
 
         # Email to Admin
         html_content_admin = render_to_string('emails/admin_custom_order_notification.html', context)
@@ -74,7 +74,7 @@ def send_custom_order_submission_emails(order):
             to=[getattr(settings, 'ARTIST_EMAIL', 'prajapattanvi5@gmail.com')]
         )
         email_admin.attach_alternative(html_content_admin, "text/html")
-        email_admin.send()
+        email_admin.send(fail_silently=True)
         
     except Exception as e:
         print(f"Custom Order Email Error: {e}")
@@ -129,7 +129,7 @@ def send_custom_order_status_email(order):
             to=[order.email]
         )
         email.attach_alternative(html_content, "text/html")
-        email.send()
+        email.send(fail_silently=True)
         
     except Exception as e:
         print(f"Custom Order Status Email Error: {e}")
