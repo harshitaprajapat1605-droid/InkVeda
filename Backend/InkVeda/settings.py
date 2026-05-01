@@ -129,6 +129,7 @@ STORAGES = {
         "BACKEND": "cloudinary_storage.storage.StaticHashedCloudinaryStorage",
     },
 }
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 
 # Razorpay Config
