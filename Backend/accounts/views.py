@@ -38,8 +38,9 @@ def dashboard(request):
     }
     return render(request, 'accounts/dashboard.html', context)
 
+from .decorators import admin_only
+
 @login_required
+@admin_only
 def admin_dashboard(request):
-    if not request.user.is_staff:
-        return HttpResponseForbidden("Unauthorized access.")
     return render(request, 'accounts/admin_dashboard.html')
