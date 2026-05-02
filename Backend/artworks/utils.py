@@ -1,8 +1,29 @@
+import resend
 from django.conf import settings
-from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
-from django.utils.html import strip_tags
 
+def send_resend_email(to_email, subject, html_content):
+    """Reusable helper to send email via Resend API."""
+    try:
+        if not settings.RESEND_API_KEY:
+            print("RESEND_API_KEY missing. Email skipped.")
+            return False
+
+        resend.api_key = settings.RESEND_API_KEY
+
+        response = resend.Emails.send({
+            "from": settings.DEFAULT_FROM_EMAIL,
+            "to": [to_email],
+            "subject": subject,
+            "html": html_content,
+        })
+
+        print("Resend email sent:", response)
+        return True
+
+    except Exception as e:
+        print("Resend email failed:", e)
+        return False
 
 def send_order_emails(order):
     context = {
@@ -13,36 +34,18 @@ def send_order_emails(order):
     # ---------------- CUSTOMER EMAIL ----------------
     try:
         html_content_customer = render_to_string('emails/order_success_customer.html', context)
-        text_content_customer = strip_tags(html_content_customer)
-
-        email_customer = EmailMultiAlternatives(
-            subject=f"Order Received - InkVeda ({order.order_id})",
-            body=text_content_customer,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[order.email]
-        )
-        email_customer.attach_alternative(html_content_customer, "text/html")
-        email_customer.send(fail_silently=True)
-
+        subject_customer = f"Order Received - InkVeda ({order.order_id})"
+        send_resend_email(order.email, subject_customer, html_content_customer)
     except Exception as e:
-        print("Customer order email failed:", e)
+        print("Customer order email process failed:", e)
 
     # ---------------- ADMIN EMAIL ----------------
     try:
         html_content_artist = render_to_string('emails/order_success_admin.html', context)
-        text_content_artist = strip_tags(html_content_artist)
-
-        email_artist = EmailMultiAlternatives(
-            subject=f"New Order Received - InkVeda ({order.order_id})",
-            body=text_content_artist,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[getattr(settings, 'ARTIST_EMAIL', 'prajapattanvi5@gmail.com')]
-        )
-        email_artist.attach_alternative(html_content_artist, "text/html")
-        email_artist.send(fail_silently=True)
-
+        subject_admin = f"New Order Received - InkVeda ({order.order_id})"
+        send_resend_email(settings.ARTIST_EMAIL, subject_admin, html_content_artist)
     except Exception as e:
-        print("Admin order email failed:", e)
+        print("Admin order email process failed:", e)
 
 
 def send_custom_order_submission_emails(order):
@@ -54,40 +57,21 @@ def send_custom_order_submission_emails(order):
     # ---------------- CUSTOMER EMAIL ----------------
     try:
         html_content_customer = render_to_string('emails/custom_order_received.html', context)
-        text_content_customer = strip_tags(html_content_customer)
-
-        email_customer = EmailMultiAlternatives(
-            subject="Custom Order Received - InkVeda",
-            body=text_content_customer,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[order.email]
-        )
-        email_customer.attach_alternative(html_content_customer, "text/html")
-        email_customer.send(fail_silently=True)
-
+        subject_customer = "Custom Order Received - InkVeda"
+        send_resend_email(order.email, subject_customer, html_content_customer)
     except Exception as e:
-        print("Customer custom order email failed:", e)
+        print("Customer custom order email process failed:", e)
 
     # ---------------- ADMIN EMAIL ----------------
     try:
         html_content_admin = render_to_string('emails/admin_custom_order_notification.html', context)
-        text_content_admin = strip_tags(html_content_admin)
-
         subject_admin = "New Custom Order Request - InkVeda"
         if order.reference_image:
             subject_admin += " (With Reference Image)"
-
-        email_admin = EmailMultiAlternatives(
-            subject=subject_admin,
-            body=text_content_admin,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[getattr(settings, 'ARTIST_EMAIL', 'prajapattanvi5@gmail.com')]
-        )
-        email_admin.attach_alternative(html_content_admin, "text/html")
-        email_admin.send(fail_silently=True)
-
+        
+        send_resend_email(settings.ARTIST_EMAIL, subject_admin, html_content_admin)
     except Exception as e:
-        print("Admin custom order email failed:", e)
+        print("Admin custom order email process failed:", e)
 
 
 def generate_upi_link(amount):
@@ -131,16 +115,7 @@ def send_custom_order_status_email(order):
             context['payment_link'] = generate_upi_link(order.final_price)
 
         html_content = render_to_string(config['template'], context)
-        text_content = strip_tags(html_content)
-
-        email = EmailMultiAlternatives(
-            subject=config['subject'],
-            body=text_content,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            to=[order.email]
-        )
-        email.attach_alternative(html_content, "text/html")
-        email.send(fail_silently=True)
+        send_resend_email(order.email, config['subject'], html_content)
 
     except Exception as e:
-        print("Custom order status email failed:", e)
+        print("Custom order status email process failed:", e)

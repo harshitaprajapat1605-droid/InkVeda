@@ -5,9 +5,6 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
-from django.core.mail import EmailMultiAlternatives
-from django.template.loader import render_to_string
-from django.utils.html import strip_tags
 from django.core.paginator import Paginator
 from django.db.models import Sum, Count
 from django.utils import timezone
