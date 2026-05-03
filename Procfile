@@ -1,1 +1,1 @@
-web: gunicorn InkVeda.wsgi
+web: gunicorn --pythonpath Backend InkVeda.wsgi
