@@ -2,19 +2,19 @@
 
 {% block dashboard_content %}
 <div class="space-y-12">
-    <header class="flex flex-col md:flex-row justify-between items-center gap-8">
+    <header class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 md:gap-8">
         <div class="space-y-2 text-center md:text-left">
-            <h1 class="text-4xl font-serif">Studio <span class="italic text-[#C2A878]">Inventory</span></h1>
-            <p class="text-sm text-[#6B6B6B] font-light">Curate and manage your collection of handcrafted masterpieces.</p>
+            <h1 class="text-3xl md:text-4xl font-serif">Studio <span class="italic text-[#C2A878]">Inventory</span></h1>
+            <p class="text-xs md:text-sm text-[#6B6B6B] font-light">Curate and manage your collection of handcrafted masterpieces.</p>
         </div>
-        <a href="{% url 'add_artwork' %}" class="px-8 py-3 bg-[#1A1A1A] text-white text-[10px] uppercase tracking-widest hover:bg-[#C2A878] transition duration-500 rounded-full">
+        <a href="{% url 'add_artwork' %}" class="w-full md:w-auto text-center px-8 py-3 bg-[#1A1A1A] text-white text-[10px] uppercase tracking-widest hover:bg-[#C2A878] transition duration-500 rounded-full">
             + New Masterpiece
         </a>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         {% for artwork in artworks %}
-        <div class="group bg-white premium-shadow border border-[#E5E5E5] overflow-hidden rounded-2xl flex flex-col h-full reveal">
+        <div class="group bg-white premium-shadow border border-[#E5E5E5] overflow-hidden rounded-2xl flex flex-col h-full">
             <!-- Image Container -->
             <div class="relative h-64 overflow-hidden bg-[#FDFDFD] flex items-center justify-center p-4">
                 <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-700">

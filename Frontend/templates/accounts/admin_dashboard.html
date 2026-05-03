@@ -3,7 +3,7 @@
 {% block content %}
 <section class="min-h-screen bg-[#FDFDFD] flex flex-col md:flex-row">
     <!-- Admin Sidebar -->
-    <aside class="w-full md:w-64 bg-white border-r border-[#E5E5E5] p-8 space-y-12">
+    <aside class="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-[#E5E5E5] p-6 md:p-8 space-y-12">
         <div class="space-y-2">
             <h3 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#C2A878]">Management</h3>
             <nav class="flex flex-col space-y-4">
@@ -23,8 +23,8 @@
     </aside>
 
     <!-- Main Content Area -->
-    <main class="flex-grow p-8 lg:p-16">
-        <div class="max-w-6xl mx-auto reveal">
+    <main class="flex-grow p-6 md:p-12 lg:p-16">
+        <div class="max-w-6xl mx-auto">
             {% block dashboard_content %}
             <div class="space-y-8">
                 <header class="space-y-2">
