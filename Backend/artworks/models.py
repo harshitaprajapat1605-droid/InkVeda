@@ -39,6 +39,9 @@ class Order(models.Model):
     STATUS_CHOICES = [
         ('Pending', 'Pending'),
         ('Confirmed', 'Confirmed'),
+        ('Shipped', 'Shipped'),
+        ('Delivered', 'Delivered'),
+        ('Cancelled', 'Cancelled'),
     ]
     user = models.ForeignKey('accounts.User', on_delete=models.SET_NULL, null=True, blank=True)
     order_id = models.CharField(max_length=50, unique=True, editable=False)
@@ -58,13 +61,31 @@ class Order(models.Model):
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='Pending')
     
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._initial_status = self.status
+        self._initial_payment_status = self.payment_status
 
     def save(self, *args, **kwargs):
         if not self.order_id:
             self.order_id = self.generate_unique_order_id()
         if not self.total_price:
             self.total_price = self.artwork.price * self.quantity
+        
+        is_new = self.pk is None
         super().save(*args, **kwargs)
+
+        if not is_new:
+            status_changed = self.status != self._initial_status
+            payment_status_changed = self.payment_status != self._initial_payment_status
+            
+            if status_changed or payment_status_changed:
+                from .utils import send_purchase_order_status_email
+                send_purchase_order_status_email(self)
+                self._initial_status = self.status
+                self._initial_payment_status = self.payment_status
 
     def generate_unique_order_id(self):
         while True:

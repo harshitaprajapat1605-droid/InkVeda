@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-20 px-6 lg:px-16 bg-[#FAFAFA] min-h-screen">
+    <div class="max-w-5xl mx-auto space-y-12">
+        <a href="{% url 'purchase_order_dashboard' %}" class="inline-flex items-center text-[10px] uppercase tracking-widest text-[#6B6B6B] hover:text-[#1A1A1A] transition">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg> Back to Orders
+        </a>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2 space-y-12">
+                <div class="bg-white p-10 md:p-16 rounded-3xl premium-shadow border border-[#E5E5E5]">
+                    <div class="flex justify-between items-start mb-12">
+                        <div class="space-y-2">
+                            <h2 class="text-4xl font-serif">{{ order.customer_name }}</h2>
+                            <p class="text-sm text-[#6B6B6B]">{{ order.email }} | {{ order.phone }}</p>
+                        </div>
+                        <span class="px-6 py-2 bg-[#F5F3EF] text-[10px] uppercase tracking-widest font-bold border border-[#C2A878] text-[#C2A878] rounded-full">
+                            #{{ order.order_id }}
+                        </span>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h4 class="text-[10px] uppercase tracking-widest text-[#6B6B6B] font-bold mb-4">Delivery Address</h4>
+                            <p class="text-sm text-[#1A1A1A] bg-[#FDFDFD] p-8 rounded-2xl border border-[#FAFAFA] leading-relaxed">
+                                {{ order.address|linebreaksbr }}
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-[10px] uppercase tracking-widest text-[#6B6B6B] font-bold mb-4">Item Details</h4>
+                            <div class="flex items-center gap-8 bg-[#FDFDFD] p-8 rounded-2xl border border-[#FAFAFA]">
+                                <div class="w-24 h-32 bg-white rounded-lg border border-[#E5E5E5] overflow-hidden flex-shrink-0">
+                                    <img src="{{ order.artwork.image.url }}" class="w-full h-full object-cover">
+                                </div>
+                                <div class="space-y-2">
+                                    <p class="text-[9px] uppercase tracking-widest text-[#C2A878]">Purchased Artwork</p>
+                                    <h3 class="text-xl font-serif text-[#1A1A1A]">{{ order.artwork.title }}</h3>
+                                    <p class="text-sm text-[#6B6B6B]">Quantity: {{ order.quantity }}</p>
+                                    <p class="text-lg font-bold text-[#1A1A1A]">₹{{ order.total_price }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if order.payment_screenshot %}
+                <div class="bg-white p-10 rounded-3xl premium-shadow border border-[#E5E5E5]">
+                     <h4 class="text-[10px] uppercase tracking-widest text-[#6B6B6B] font-bold mb-8">Payment Screenshot</h4>
+                     <a href="{{ order.payment_screenshot.url }}" target="_blank" class="block rounded-2xl overflow-hidden border border-[#F5F3EF] hover:opacity-90 transition">
+                         <img src="{{ order.payment_screenshot.url }}" class="w-full h-auto">
+                     </a>
+                </div>
+                {% endif %}
+            </div>
+
+            <aside class="space-y-12">
+                <div class="bg-[#1A1A1A] p-10 rounded-3xl premium-shadow text-white">
+                    <h4 class="text-[10px] uppercase tracking-widest text-[#C2A878] font-bold mb-8">Order Fulfillment</h4>
+                    <form method="POST" class="space-y-10">
+                        {% csrf_token %}
+                        <div class="space-y-4">
+                            <label class="text-[9px] uppercase tracking-widest text-[#6B6B6B]">Order Status</label>
+                            <select name="status" class="w-full bg-[#2A2A2A] text-white p-4 rounded-xl border border-[#3A3A3A] text-sm outline-none focus:border-[#C2A878] transition">
+                                {% for key, val in order.STATUS_CHOICES %}
+                                <option value="{{ key }}" {% if order.status == key %}selected{% endif %}>{{ val }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="space-y-4">
+                            <label class="text-[9px] uppercase tracking-widest text-[#6B6B6B]">Payment Status</label>
+                            <select name="payment_status" class="w-full bg-[#2A2A2A] text-white p-4 rounded-xl border border-[#3A3A3A] text-sm outline-none focus:border-[#C2A878] transition">
+                                {% for key, val in order.PAYMENT_STATUS_CHOICES %}
+                                <option value="{{ key }}" {% if order.payment_status == key %}selected{% endif %}>{{ val }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="space-y-4">
+                            <label class="text-[9px] uppercase tracking-widest text-[#6B6B6B]">Transaction Reference</label>
+                            <input type="text" name="transaction_id" value="{{ order.transaction_id|default:'' }}" class="w-full bg-[#2A2A2A] text-white p-4 rounded-xl border border-[#3A3A3A] text-sm outline-none focus:border-[#C2A878] transition" placeholder="Enter Ref ID...">
+                        </div>
+
+                        <button type="submit" class="w-full py-5 bg-[#C2A878] text-white text-[10px] uppercase tracking-widest font-bold rounded-xl shadow-lg shadow-[#C2A878]/20 hover:scale-105 transition-all">Save Changes</button>
+                    </form>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-[#E5E5E5] space-y-6">
+                    <h4 class="text-[10px] uppercase tracking-widest text-[#6B6B6B] font-bold">Metadata</h4>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-[10px] uppercase tracking-widest">
+                            <span class="text-[#888]">Ordered</span>
+                            <span class="text-[#1A1A1A] font-bold">{{ order.created_at|date:"d M Y H:i" }}</span>
+                        </div>
+                        <div class="flex justify-between text-[10px] uppercase tracking-widest">
+                            <span class="text-[#888]">Last Updated</span>
+                            <span class="text-[#1A1A1A] font-bold">{{ order.updated_at|timesince }} ago</span>
+                        </div>
+                        <div class="flex justify-between text-[10px] uppercase tracking-widest">
+                            <span class="text-[#888]">Method</span>
+                            <span class="text-[#1A1A1A] font-bold">{{ order.payment_method }}</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -11,18 +11,24 @@ def send_resend_email(to_email, subject, html_content):
 
         resend.api_key = settings.RESEND_API_KEY
 
+        # If in DEBUG mode, redirect all emails to the artist email to avoid Resend's restrictions on unverified domains
+        actual_recipient = to_email
+        if settings.DEBUG:
+            actual_recipient = settings.ARTIST_EMAIL
+            subject = f"[TEST -> {to_email}] {subject}"
+
         response = resend.Emails.send({
             "from": settings.DEFAULT_FROM_EMAIL,
-            "to": [to_email],
+            "to": [actual_recipient],
             "subject": subject,
             "html": html_content,
         })
 
-        print("Resend email sent:", response)
+        print(f"Resend email sent to {actual_recipient}:", response)
         return True
 
     except Exception as e:
-        print("Resend email failed:", e)
+        print(f"Resend email to {to_email} failed:", e)
         return False
 
 def send_order_emails(order):
@@ -119,3 +125,18 @@ def send_custom_order_status_email(order):
 
     except Exception as e:
         print("Custom order status email process failed:", e)
+
+def send_purchase_order_status_email(order):
+    try:
+        context = {
+            'order': order,
+            'site_url': settings.SITE_URL,
+        }
+
+        subject = f"Update on your InkVeda Order - {order.order_id}"
+        html_content = render_to_string('emails/purchase_order_status_update.html', context)
+        
+        send_resend_email(order.email, subject, html_content)
+
+    except Exception as e:
+        print("Purchase order status email process failed:", e)

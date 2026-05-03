@@ -9,6 +9,7 @@
             <nav class="flex flex-col space-y-4">
                 <a href="{% url 'admin_analytics' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'admin_analytics' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Analytics</a>
                 <a href="{% url 'custom_order_dashboard' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'custom_order_dashboard' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Custom Orders</a>
+                <a href="{% url 'purchase_order_dashboard' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'purchase_order_dashboard' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Purchase Orders</a>
                 <a href="{% url 'manage_artworks' %}" class="text-xs uppercase tracking-widest hover:text-[#C2A878] transition {% if request.resolver_match.url_name == 'manage_artworks' %}text-[#C2A878] font-bold{% else %}text-[#6B6B6B]{% endif %}">Manage Artworks</a>
             </nav>
         </div>

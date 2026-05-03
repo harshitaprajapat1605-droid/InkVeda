@@ -187,6 +187,40 @@ def custom_order_dashboard(request):
     })
 
 @admin_only
+def purchase_order_dashboard(request):
+    status_filter = request.GET.get('status')
+    search_query = request.GET.get('search')
+    
+    orders = Order.objects.all().order_by('-created_at')
+    
+    if status_filter:
+        orders = orders.filter(status=status_filter)
+    if search_query:
+        orders = orders.filter(
+            models.Q(customer_name__icontains=search_query) | 
+            models.Q(email__icontains=search_query) |
+            models.Q(order_id__icontains=search_query)
+        )
+    
+    return render(request, 'artworks/dashboard/purchase_orders.html', {
+        'orders': orders,
+        'status_choices': Order.STATUS_CHOICES,
+        'current_status': status_filter
+    })
+
+@admin_only
+def purchase_order_admin_detail(request, pk):
+    order = get_object_or_404(Order, pk=pk)
+    if request.method == 'POST':
+        order.status = request.POST.get('status')
+        order.payment_status = request.POST.get('payment_status')
+        order.transaction_id = request.POST.get('transaction_id')
+        order.save()
+        return redirect('purchase_order_dashboard')
+    
+    return render(request, 'artworks/dashboard/purchase_order_detail.html', {'order': order})
+
+@admin_only
 def custom_order_admin_detail(request, pk):
     order = get_object_or_404(CustomOrder, pk=pk)
     if request.method == 'POST':
